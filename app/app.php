@@ -37,6 +37,8 @@ $app->get('/', function ($request, $response) use ($app, $prismic) {
   $api = $prismic->get_api();
   //$bloghomeContent = $api->getSingle('bloghome');
   $clients = $api->query(Predicates::at("document.type", "c"));
+  $features_items = $api->query(Predicates::at("document.type", "features_item"));
+  
   
   // If there is no bloghome content, display 404 page
   /*
@@ -48,14 +50,13 @@ $app->get('/', function ($request, $response) use ($app, $prismic) {
   
   // Render the homepage
   //render($app, 'main', array('bloghome' => $bloghomeContent, 'posts' => $posts->getResults()));
-  render($app, 'main', array('clients' => $clients->getResults()));
-
+  render($app, 'main', array('clients' => $clients->getResults(), 'features_items' => $features_items->getResults()) );
 
 });
 
 // Help Page
 $app->get('/help', function ($request, $response) use ($app, $prismic) {
-  $DEFAULT_ENDPOINT = 'https://your-repo-name.prismic.io/api';
+  $DEFAULT_ENDPOINT = 'https://tapgage.prismic.io/api';
   $API_ENDPOINT = $app->getContainer()->get('settings')['prismic.url'];
   preg_match("/^(https?:\/\/([-_a-zA-Z0-9]+)\..+)\/api$/", $API_ENDPOINT, $match);
   $repoURL = $match[1];

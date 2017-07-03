@@ -6,6 +6,8 @@ if (isset($WPGLOBAL['pageContent'])) {
 }
 
 $clients = $WPGLOBAL['clients'];
+$features_items = $WPGLOBAL['features_items'];
+$cont = $WPGLOBAL['cont'];
 
 $title = "TODO";
 
@@ -537,50 +539,82 @@ $title = "TODO";
       <div class="container-e" data-ix="animate-on-scroll-b">
         <div class="tabs-1 w-tabs" data-duration-in="300" data-duration-out="100">
           <div class="tabs-1-menu w-tab-menu">
-            <a class="tab-1-link-a w--current w-inline-block w-tab-link" data-w-tab="Tab 1">
+            <a class="tab-1-link-a w--current w-inline-block w-tab-link" data-w-tab="Tab 4">
               <div>Analytics</div>
             </a>
-            <a class="tab-1-link-a w-inline-block w-tab-link" data-w-tab="Tab 5">
+            <a class="tab-1-link-a w-inline-block w-tab-link" data-w-tab="Tab 6">
               <div>User profiles</div>
             </a>
-            <a class="tab-1-link-a w-inline-block w-tab-link" data-w-tab="Tab 6">
+            <a class="tab-1-link-a w-inline-block w-tab-link" data-w-tab="Tab 7">
               <div>Events</div>
             </a>
-            <a class="tab-1-link-a w-inline-block w-tab-link" data-w-tab="Tab 7">
+            <a class="tab-1-link-a w-inline-block w-tab-link" data-w-tab="Tab 1">
               <div>Geo-distribution</div>
             </a>
-            <a class="tab-1-link-a w-inline-block w-tab-link" data-w-tab="Tab 8">
+            <a class="tab-1-link-a w-inline-block w-tab-link" data-w-tab="Tab 3">
               <div>Funnels and segments</div>
             </a>
-            <a class="tab-1-link-a w-inline-block w-tab-link" data-w-tab="Tab 9">
+            <a class="tab-1-link-a w-inline-block w-tab-link" data-w-tab="Tab 10">
               <div>Campaigns</div>
             </a>
-            <a class="tab-1-link-a w-inline-block w-tab-link" data-w-tab="Tab 10">
+            <a class="tab-1-link-a w-inline-block w-tab-link" data-w-tab="Tab 2">
               <div>In app notifications</div>
             </a>
-            <a class="tab-1-link-a w-inline-block w-tab-link" data-w-tab="Tab 11">
+            <a class="tab-1-link-a w-inline-block w-tab-link" data-w-tab="Tab 8">
               <div>Push notifications</div>
             </a>
-            <a class="tab-1-link-a w-inline-block w-tab-link" data-w-tab="Tab 12">
+            <a class="tab-1-link-a w-inline-block w-tab-link" data-w-tab="Tab 5">
               <div>SMS Messages</div>
             </a>
-            <a class="tab-1-link-a w-inline-block w-tab-link" data-w-tab="Tab 13">
+            <a class="tab-1-link-a w-inline-block w-tab-link" data-w-tab="Tab 9">
               <div>Email messages</div>
             </a>
           </div>
           <div class="tabs-1-content w-tab-content">
-            <div class="tab-1-pane w--tab-active w-tab-pane" data-w-tab="Tab 1">
+
+           
+            <?php
+               $cont = 0; 
+               foreach ($features_items as $feature) { 
+                ++$cont;
+            ?>
+            <!--
+            srcset="images/-43x_1-p-500.png 500w, images/-43x_1-p-800.png 800w, images/-43x_1-p-1080.png 1080w, images/-43x_1-p-1600.png 1600w, images/-43x_1.png 1623w"
+
+            sizes="(max-width: 479px) 180px, (max-width: 767px) 220px, (max-width: 991px) 300px, 400.734375px"
+
+            -->
+            <div class="tab-1-pane w--tab-active w-tab-pane" data-w-tab="Tab <?php echo $cont ?>" >
               <div>
-                <div class="tab-1-item-a" data-ix="animate-on-scroll-c"><img class="image" data-ix="tabs-3" sizes="(max-width: 479px) 180px, (max-width: 767px) 220px, (max-width: 991px) 300px, 400.734375px" src="images/-43x_1.png" srcset="images/-43x_1-p-500.png 500w, images/-43x_1-p-800.png 800w, images/-43x_1-p-1080.png 1080w, images/-43x_1-p-1600.png 1600w, images/-43x_1.png 1623w">
+                <div class="tab-1-item-a" data-ix="animate-on-scroll-c">
+
+                <div class="tab-1-item-a">
+                <!--img class="image" data-ix="tabs-1" src="<?php //$client->getImage('c.logo')->getUrl() ?>" -->
+                </div>
+                
                 </div>
                 <div class="tab-1-item-a" data-ix="tabs-2">
-                  <h3 data-ix="animate-on-scroll-d">Analytics</h3>
+                  <h3 data-ix="animate-on-scroll-d">
+                    <?= $feature->getText('features_item.title') ? $feature->getText('features_item.title') : "Untitled" ?>
+                  </h3>
                 </div>
                 <div class="tab-1-item-a" data-ix="tabs-2">
-                  <div class="p-big" data-ix="animate-on-scroll-e">Get a clear and concise summary of the entire customer lifecycle with event-based analytics; what they do inside your app, for how long, what they like and what they dislike.</div>
-                </div><a class="button-b w-button" data-ix="tabs-2" href="programmatic-analytics.html">Learn more</a>
+                  <div class="p-big" data-ix="animate-on-scroll-e">
+                    <?= $feature->getText('features_item.content') ? $feature->getText('features_item.content') : "Untitled" ?>
+                    
+                  </div>
+                </div>
+                <a 
+                class="button-b w-button" 
+                data-ix="tabs-2" 
+                href="<?= $feature->getLink('features_item.link')->getUrl($linkResolver) ?>">Learn more</a>
+
               </div>
             </div>
+
+            <?php } ?> 
+           <!--
+
             <div class="tab-1-pane w-tab-pane" data-w-tab="Tab 5">
               <div>
                 <div class="tab-1-item-a"><img class="image" data-ix="tabs-1" sizes="(max-width: 479px) 180px, (max-width: 767px) 220px, (max-width: 991px) 300px, 426.109375px" src="images/-43x.png" srcset="images/-43x-p-500.png 500w, images/-43x-p-800.png 800w, images/-43x-p-1080.png 1080w, images/-43x-p-1600.png 1600w, images/-43x.png 1632w">
@@ -689,6 +723,9 @@ $title = "TODO";
                 </div><a class="button-b w-button" data-ix="tabs-2" href="email-marketing.html">Learn more</a>
               </div>
             </div>
+
+            -->
+
           </div>
         </div>
       </div>
