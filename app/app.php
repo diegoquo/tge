@@ -37,8 +37,19 @@ $app->get('/', function ($request, $response) use ($app, $prismic) {
   $api = $prismic->get_api();
   //$bloghomeContent = $api->getSingle('bloghome');
   $clients = $api->query(Predicates::at("document.type", "c"));
-  $features_items = $api->query(Predicates::at("document.type", "features_item"));
+
   
+  //1 11 2 6 7 8 9 10 5 4  
+  $ids = ['4','1','5','6', '7', '8', '9', '10', '11','12'];
+  $features_menu = $api->query(
+      Predicates::in('my.features_item.uid', $ids)
+  );
+  
+
+  $features_items = $api->query(
+    Predicates::at('document.type', 'features_item'),
+    [ 'orderings' => '[my.features_item.uid]' ]
+  );
   
   // If there is no bloghome content, display 404 page
   /*
@@ -50,7 +61,14 @@ $app->get('/', function ($request, $response) use ($app, $prismic) {
   
   // Render the homepage
   //render($app, 'main', array('bloghome' => $bloghomeContent, 'posts' => $posts->getResults()));
-  render($app, 'main', array('clients' => $clients->getResults(), 'features_items' => $features_items->getResults()) );
+  render(
+    $app, 'main', 
+    array(
+      'clients' => $clients->getResults(),
+      'features_items' => $features_items->getResults(),
+      'features_menu' => $features_menu->getResults(),
+    ) 
+  );
 
 });
 
