@@ -32,20 +32,24 @@ $title = "TODO";
 
   <?php include 'menu.php'; ?>
 
-
-  
+        </div>
+      </div>
+      <div class="mobile-close-button-box" data-ix="close-menu-mobile"><img class="mobile-menu-close-button" src="images/Group3x.png">
+      </div>
+    </div>
+  </div>
   <div class="section-hero-c" data-ix="animate-on-load-a">
     <div class="container w-container">
       <div class="section-hero-c-container-a" data-ix="animate-on-load-b">
         <div class="section-hero-c-container-a-item-a">
-          <h1>Geo-distribution</h1>
+          <h1>Email marketing</h1>
         </div>
         <div class="section-hero-c-container-a-item-a">
-          <div class="p-big">Know detailed location information of your users. Know the up or down trend of those locations.</div>
+          <div class="p-big">Email campaigns are a good way to reach your users outside of your app. Gives you an engagement opportunity to connect with users who uninstalled your app.</div>
         </div>
       </div>
       <div class="div-block-6">
-        <div class="div-block-7"><img class="image-8" data-ix="animate-on-load-c" sizes="(max-width: 479px) 100vw, (max-width: 767px) 367px, (max-width: 991px) 441px, 808px" src="images/33x_1.png" srcset="images/33x_1-p-500.png 500w, images/33x_1-p-800.png 800w, images/33x_1-p-1080.png 1080w, images/33x_1-p-1600.png 1600w, images/33x_1-p-2000.png 2000w, images/33x_1.png 2454w">
+        <div class="div-block-7"><img class="image-8" data-ix="animate-on-load-c" sizes="(max-width: 479px) 100vw, (max-width: 767px) 280px, (max-width: 991px) 336px, 616px" src="images/13x_9.png" srcset="images/13x_9-p-500.png 500w, images/13x_9-p-800.png 800w, images/13x_9-p-1080.png 1080w, images/13x_9-p-1600.png 1600w, images/13x_9-p-2000.png 2000w, images/13x_9.png 2070w">
         </div>
       </div>
     </div>
@@ -53,41 +57,18 @@ $title = "TODO";
   <div class="section-h">
     <div class="container w-container">
       <div class="container-p">
-        <div class="container-p-box-a" data-ix="animate-on-scroll-a"><img class="image-3" sizes="(max-width: 479px) 100vw, (max-width: 767px) 390.140625px, (max-width: 991px) 41vw, 42vw" src="images/63x_1.png" srcset="images/63x_1-p-500.png 500w, images/63x_1-p-800.png 800w, images/63x_1-p-1080.png 1080w, images/63x_1.png 1545w">
+        <div class="container-p-box-a" data-ix="animate-on-scroll-a"><img class="image-3" sizes="(max-width: 479px) 100vw, (max-width: 767px) 273.359375px, (max-width: 991px) 41vw, 42vw" src="images/33x_2.png" srcset="images/33x_2-p-500.png 500w, images/33x_2-p-800.png 800w, images/33x_2-p-1080.png 1080w, images/33x_2.png 1509w">
         </div>
         <div class="container-p-box-b">
           <div class="container-p-box-b-item-a">
-            <div class="icon-box-a" data-ix="animate-on-scroll-b"><img class="icon-pic-a" src="images/13x_5.png">
+            <div class="icon-box-a" data-ix="animate-on-scroll-b"><img class="icon-pic-a" src="images/1-3x_2.png">
             </div>
           </div>
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-c">
-            <h2>Dealing with a global audience</h2>
-            <div class="div-block-23"></div>
+            <h2>Send improved email campaigns</h2>
           </div>
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-d">
-            <div>Analyze and target your customers by their location.</div>
-          </div>
-        </div>
-        <div class="div-block-8">
-          <div class="abstract-b"></div>
-          <div class="abstract-c"></div>
-          <div class="abstract-a"></div>
-        </div>
-      </div>
-      <div class="container-p container-p-reverse">
-        <div class="container-p-box-a" data-ix="animate-on-scroll-a"><img class="image-3" sizes="(max-width: 479px) 100vw, (max-width: 767px) 388.46875px, (max-width: 991px) 41vw, 42vw" src="images/73x.png" srcset="images/73x-p-500.png 500w, images/73x-p-800.png 800w, images/73x-p-1080.png 1080w, images/73x.png 1545w">
-        </div>
-        <div class="container-p-box-b">
-          <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-b">
-            <div class="icon-box-a"><img class="icon-pic-a" src="images/1-copy3x_1.png">
-            </div>
-          </div>
-          <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-c">
-            <h2>Fulfilling requirements by area</h2>
-            <div class="div-block-23"></div>
-          </div>
-          <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-d">
-            <div>See the trend of locations and optimize those customers’ requirements.</div>
+            <div>You can use email messages to retain and re-engage with your users. Alternatively, you can advertise your app with newsletters.</div>
           </div>
         </div>
         <div class="div-block-8">

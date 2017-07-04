@@ -18,7 +18,8 @@
                    <?php foreach ($features_menu as $menu) { ?>
                     <a class="link-block-3 w-inline-block" href="<?= $menu->getLink('features_item.link')->getUrl($linkResolver) ?>">
                       <div class="nav-bar-icon-box-a">
-                        <div class="icon-box-a"><img class="icon-pic-b" src="<?= $menu->getImage('features_item.menu_icon')->getUrl() ?>">
+                        <div class="icon-box-a">
+                        <img class="icon-pic-b" src="<?= $menu->getImage('features_item.menu_icon')->getUrl() ?>">
                         </div>
                         <div class="nav-bar-icon-box-a-item-a">
                           <div class="nav-bar-link-b">
@@ -31,8 +32,6 @@
                       </div>
                     </a>
                     <?php } ?>
-                  
-                   
                   
                   </div>
                   
@@ -51,33 +50,23 @@
               <div class="link-b">Learn</div><img class="nav-bar-b-item-b-arrow-pic" src="images/13x_2.png">
               <div class="nav-bar-sub-menu-a">
                 <div class="nav-bar-b-item-b-box-a" data-ix="close-nav-bar-item-b">
-                  <a class="link-block-3 w-inline-block" href="company.html">
+                  
+                  <?php foreach ($menu_learn as $mnu_learn) { ?>
+                  <a class="link-block-3 w-inline-block" 
+                     href="#" />
                     <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-press3x_1.png">
+                      <div class="icon-box-a"><img class="icon-pic-b" 
+                           src="" />
                       </div>
                       <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">Company</div>
+                        <div class="nav-bar-link-b">
+                          <?= $mnu_learn->getText('menu_learn.menu_title') ? $mnu_learn->getText('menu_learn.menu_title') : "Untitled" ?>
+                        </div>
                       </div>
                     </div>
                   </a>
-                  <a class="link-block-3 w-inline-block" href="blog-list.html">
-                    <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-company3x_1.png">
-                      </div>
-                      <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">Blog</div>
-                      </div>
-                    </div>
-                  </a>
-                  <a class="link-block-3 w-inline-block" href="press-list.html">
-                    <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-blog3x_1.png">
-                      </div>
-                      <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">Press</div>
-                      </div>
-                    </div>
-                  </a>
+                  <?php } ?>
+
                 </div>
               </div>
             </div>
@@ -85,69 +74,23 @@
               <div class="link-b">Documentation</div><img class="nav-bar-b-item-b-arrow-pic" src="images/13x_2.png">
               <div class="nav-bar-sub-menu-a">
                 <div class="nav-bar-b-item-b-box-a" data-ix="close-nav-bar-item-b">
-                  <a class="link-block-3 w-inline-block" href="documentation.html">
+                  
+                  <?php foreach ($menu_doc as $mnu_doc) { ?>
+                  <a class="link-block-3 w-inline-block" href="">
                     <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-dev-docs3x_1.png">
+                      <div class="icon-box-a"><img class="icon-pic-b" 
+                           src="">
                       </div>
                       <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">Dev-Docs</div>
+                        <div class="nav-bar-link-b">
+                          <?= $mnu_doc->getText('menu_doc.menu_title') ? $mnu_doc->getText('menu_doc.menu_title') : "Untitled" ?>
+                        </div>
                       </div>
                     </div>
                   </a>
-                  <a class="link-block-3 w-inline-block" href="documentation.html">
-                    <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-ios3x_1.png">
-                      </div>
-                      <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">IOS</div>
-                      </div>
-                    </div>
-                  </a>
-                  <a class="link-block-3 w-inline-block" href="documentation.html">
-                    <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-android3x_1.png">
-                      </div>
-                      <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">Android</div>
-                      </div>
-                    </div>
-                  </a>
-                  <a class="link-block-3 w-inline-block" href="documentation.html">
-                    <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-sdk3x.png">
-                      </div>
-                      <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">SDK</div>
-                      </div>
-                    </div>
-                  </a>
-                  <a class="link-block-3 w-inline-block" href="documentation.html">
-                    <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-profile-api3x_1.png">
-                      </div>
-                      <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">Profile API</div>
-                      </div>
-                    </div>
-                  </a>
-                  <a class="link-block-3 w-inline-block" href="documentation.html">
-                    <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-push-api3x_1.png">
-                      </div>
-                      <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">Push API</div>
-                      </div>
-                    </div>
-                  </a>
-                  <a class="link-block-3 w-inline-block" href="documentation.html">
-                    <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-events-api3x_1.png">
-                      </div>
-                      <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">Events API</div>
-                      </div>
-                    </div>
-                  </a>
+                  <?php } ?>
+                  
+                
                 </div>
               </div>
             </div>
@@ -155,78 +98,22 @@
               <div class="link-b">User guide</div><img class="nav-bar-b-item-b-arrow-pic" src="images/13x_2.png">
               <div class="nav-bar-sub-menu-a">
                 <div class="nav-bar-b-item-b-box-a" data-ix="close-nav-bar-item-b">
-                  <a class="link-block-3 w-inline-block" href="user-guide.html">
+                  
+                  <?php foreach ($menu_user_guide as $mnu_doc) { ?>
+                  <a class="link-block-3 w-inline-block" href="#">
                     <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-dashboard3x.png">
+                      <div class="icon-box-a"><img class="icon-pic-b" 
+                      src="<?= $mnu_doc->getImage('menu_user_guide.menu_icon')->getUrl() ?>">
                       </div>
                       <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">Dashboard</div>
+                        <div class="nav-bar-link-b">
+                        <?= $mnu_doc->getText('menu_user_guide.menu_title') ? $mnu_doc->getText('menu_user_guide.menu_title') : "Untitled" ?>
+                        </div>
                       </div>
                     </div>
                   </a>
-                  <a class="link-block-3 w-inline-block" href="user-guide.html">
-                    <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-analytics3x.png">
-                      </div>
-                      <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">Analytics</div>
-                      </div>
-                    </div>
-                  </a>
-                  <a class="link-block-3 w-inline-block" href="user-guide.html">
-                    <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-users3x_1.png">
-                      </div>
-                      <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">Users</div>
-                      </div>
-                    </div>
-                  </a>
-                  <a class="link-block-3 w-inline-block" href="user-guide.html">
-                    <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-events3x_1.png">
-                      </div>
-                      <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">Events</div>
-                      </div>
-                    </div>
-                  </a>
-                  <a class="link-block-3 w-inline-block" href="user-guide.html">
-                    <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-geo-distribution3x_1.png">
-                      </div>
-                      <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">Geo-Distribution</div>
-                      </div>
-                    </div>
-                  </a>
-                  <a class="link-block-3 w-inline-block" href="user-guide.html">
-                    <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-funnel-and-segments3x_1.png">
-                      </div>
-                      <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">Funnels &amp; segments</div>
-                      </div>
-                    </div>
-                  </a>
-                  <a class="link-block-3 w-inline-block" href="user-guide.html">
-                    <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-campaigns3x.png">
-                      </div>
-                      <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">Campaigns</div>
-                      </div>
-                    </div>
-                  </a>
-                  <a class="link-block-3 w-inline-block" href="user-guide.html">
-                    <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-dev-tools3x.png">
-                      </div>
-                      <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">Dev-Tools</div>
-                      </div>
-                    </div>
-                  </a>
+                  <?php } ?>
+                  
                 </div>
               </div>
             </div>
@@ -234,33 +121,25 @@
               <div class="link-b">Help</div><img class="nav-bar-b-item-b-arrow-pic" src="images/13x_2.png">
               <div class="nav-bar-sub-menu-a">
                 <div class="nav-bar-b-item-b-box-a" data-ix="close-nav-bar-item-b">
+                  
+                  <?php foreach ($menu_help as $mnu_doc) { ?>
                   <a class="link-block-3 w-inline-block" href="#">
                     <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-support3x_1.png">
+                      <div class="icon-box-a">
+                        <img class="icon-pic-b" 
+                             src="<?= $mnu_doc->getImage('menu_help.menu_icon')->getUrl() ?>">
                       </div>
                       <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">Support</div>
+                        <div class="nav-bar-link-b">
+
+                        <?= $mnu_doc->getText('menu_help.menu_title') ? $mnu_doc->getText('menu_help.menu_title') : "Untitled" ?>
+      
+                        </div>
                       </div>
                     </div>
                   </a>
-                  <a class="link-block-3 w-inline-block" href="contact.html">
-                    <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-contact-us3x_1.png">
-                      </div>
-                      <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">Contact us</div>
-                      </div>
-                    </div>
-                  </a>
-                  <a class="link-block-3 w-inline-block" href="#">
-                    <div class="nav-bar-icon-box-a">
-                      <div class="icon-box-a"><img class="icon-pic-b" src="images/-community-3x_1.png">
-                      </div>
-                      <div class="nav-bar-icon-box-a-item-a">
-                        <div class="nav-bar-link-b">Community</div>
-                      </div>
-                    </div>
-                  </a>
+                  <?php } ?>
+                  
                 </div>
               </div>
             </div>

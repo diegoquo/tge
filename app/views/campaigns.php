@@ -33,19 +33,18 @@ $title = "TODO";
   <?php include 'menu.php'; ?>
 
 
-  
   <div class="section-hero-c" data-ix="animate-on-load-a">
     <div class="container w-container">
       <div class="section-hero-c-container-a" data-ix="animate-on-load-b">
         <div class="section-hero-c-container-a-item-a">
-          <h1>Geo-distribution</h1>
+          <h1>Campaigns</h1>
         </div>
         <div class="section-hero-c-container-a-item-a">
-          <div class="p-big">Know detailed location information of your users. Know the up or down trend of those locations.</div>
+          <div class="p-big">Choose the right promo campaigns to give your apps a boost when it needs it and keep on measuring to know what works and what doesn’t, improving your app and marketing it.</div>
         </div>
       </div>
       <div class="div-block-6">
-        <div class="div-block-7"><img class="image-8" data-ix="animate-on-load-c" sizes="(max-width: 479px) 100vw, (max-width: 767px) 367px, (max-width: 991px) 441px, 808px" src="images/33x_1.png" srcset="images/33x_1-p-500.png 500w, images/33x_1-p-800.png 800w, images/33x_1-p-1080.png 1080w, images/33x_1-p-1600.png 1600w, images/33x_1-p-2000.png 2000w, images/33x_1.png 2454w">
+        <div class="div-block-7"><img class="image-8" data-ix="animate-on-load-c" sizes="(max-width: 479px) 100vw, (max-width: 767px) 361px, (max-width: 991px) 434px, 795px" src="images/-53x_1.png" srcset="images/-53x_1-p-500.png 500w, images/-53x_1-p-800.png 800w, images/-53x_1-p-1080.png 1080w, images/-53x_1-p-1600.png 1600w, images/-53x_1-p-2000.png 2000w, images/-53x_1.png 2454w">
         </div>
       </div>
     </div>
@@ -53,19 +52,18 @@ $title = "TODO";
   <div class="section-h">
     <div class="container w-container">
       <div class="container-p">
-        <div class="container-p-box-a" data-ix="animate-on-scroll-a"><img class="image-3" sizes="(max-width: 479px) 100vw, (max-width: 767px) 390.140625px, (max-width: 991px) 41vw, 42vw" src="images/63x_1.png" srcset="images/63x_1-p-500.png 500w, images/63x_1-p-800.png 800w, images/63x_1-p-1080.png 1080w, images/63x_1.png 1545w">
+        <div class="container-p-box-a" data-ix="animate-on-scroll-a"><img class="image-3" sizes="(max-width: 479px) 100vw, (max-width: 767px) 383.546875px, (max-width: 991px) 41vw, 42vw" src="images/-63x_2.png" srcset="images/-63x_2-p-500.png 500w, images/-63x_2-p-800.png 800w, images/-63x_2-p-1080.png 1080w, images/-63x_2-p-1600.png 1600w, images/-63x_2.png 1749w">
         </div>
         <div class="container-p-box-b">
           <div class="container-p-box-b-item-a">
-            <div class="icon-box-a" data-ix="animate-on-scroll-b"><img class="icon-pic-a" src="images/13x_5.png">
+            <div class="icon-box-a" data-ix="animate-on-scroll-b"><img class="icon-pic-a" src="images/-13x_4.png">
             </div>
           </div>
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-c">
-            <h2>Dealing with a global audience</h2>
-            <div class="div-block-23"></div>
+            <h2>Personalized Campaigns</h2>
           </div>
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-d">
-            <div>Analyze and target your customers by their location.</div>
+            <div>Remind new customers about features of your app and a welcome message to cheer them up for joining your app.</div>
           </div>
         </div>
         <div class="div-block-8">
@@ -75,19 +73,18 @@ $title = "TODO";
         </div>
       </div>
       <div class="container-p container-p-reverse">
-        <div class="container-p-box-a" data-ix="animate-on-scroll-a"><img class="image-3" sizes="(max-width: 479px) 100vw, (max-width: 767px) 388.46875px, (max-width: 991px) 41vw, 42vw" src="images/73x.png" srcset="images/73x-p-500.png 500w, images/73x-p-800.png 800w, images/73x-p-1080.png 1080w, images/73x.png 1545w">
+        <div class="container-p-box-a" data-ix="animate-on-scroll-a"><img class="image-3" sizes="(max-width: 479px) 100vw, (max-width: 767px) 383.546875px, (max-width: 991px) 41vw, 42vw" src="images/--83x.png" srcset="images/--83x-p-500.png 500w, images/--83x-p-800.png 800w, images/--83x-p-1080.png 1080w, images/--83x-p-1600.png 1600w, images/--83x.png 1749w">
         </div>
         <div class="container-p-box-b">
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-b">
-            <div class="icon-box-a"><img class="icon-pic-a" src="images/1-copy3x_1.png">
+            <div class="icon-box-a"><img class="icon-pic-a" src="images/-1-copy3x_3.png">
             </div>
           </div>
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-c">
-            <h2>Fulfilling requirements by area</h2>
-            <div class="div-block-23"></div>
+            <h2>Reengagement Campaigns</h2>
           </div>
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-d">
-            <div>See the trend of locations and optimize those customers’ requirements.</div>
+            <div>Engage with users who have uninstalled the app with the email campaigns.</div>
           </div>
         </div>
         <div class="div-block-8">

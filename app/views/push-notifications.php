@@ -32,19 +32,18 @@ $title = "TODO";
 
   <?php include 'menu.php'; ?>
 
-
   <div class="section-hero-c" data-ix="animate-on-load-a">
     <div class="container w-container">
       <div class="section-hero-c-container-a" data-ix="animate-on-load-b">
         <div class="section-hero-c-container-a-item-a">
-          <h1>Funnels and segment</h1>
+          <h1>Push notifications</h1>
         </div>
         <div class="section-hero-c-container-a-item-a">
-          <div class="p-big">Funnels can be a great way to get your audience to take actions. By carefully planning out a strategy and make up a series of steps to take them from app awareness all the way to brand loyalty. &nbsp;By segmenting your market, you can target specific audiences and improve your productivity.</div>
+          <div class="p-big">Push notifications can be a great tool to send important info to your users and have them come back to your app or announce exciting new content that they care about, a special offer, some cross promotion, etc</div>
         </div>
       </div>
       <div class="div-block-6">
-        <div class="div-block-7"><img class="image-8" data-ix="animate-on-load-c" sizes="(max-width: 479px) 100vw, (max-width: 767px) 367px, (max-width: 991px) 441px, 808px" src="images/63x_2.png" srcset="images/63x_2-p-500.png 500w, images/63x_2-p-800.png 800w, images/63x_2-p-1080.png 1080w, images/63x_2-p-1600.png 1600w, images/63x_2-p-2000.png 2000w, images/63x_2.png 2454w">
+        <div class="div-block-7"><img class="image-8" data-ix="animate-on-load-c" sizes="(max-width: 479px) 100vw, (max-width: 767px) 193px, (max-width: 991px) 232px, 425px" src="images/push-3x.png" srcset="images/push-3x-p-500.png 500w, images/push-3x-p-800.png 800w, images/push-3x-p-1080.png 1080w, images/push-3x.png 1494w">
         </div>
       </div>
     </div>
@@ -52,19 +51,18 @@ $title = "TODO";
   <div class="section-h">
     <div class="container w-container">
       <div class="container-p">
-        <div class="container-p-box-a" data-ix="animate-on-scroll-a"><img class="image-3" sizes="(max-width: 479px) 100vw, (max-width: 767px) 384.859375px, (max-width: 991px) 41vw, 42vw" src="images/53x_3.png" srcset="images/53x_3-p-500.png 500w, images/53x_3-p-800.png 800w, images/53x_3-p-1080.png 1080w, images/53x_3-p-1600.png 1600w, images/53x_3.png 1755w">
+        <div class="container-p-box-a" data-ix="animate-on-scroll-a"><img class="image-3" sizes="(max-width: 479px) 100vw, (max-width: 767px) 320.015625px, (max-width: 991px) 41vw, 42vw" src="images/43x_3.png" srcset="images/43x_3-p-500.png 500w, images/43x_3-p-800.png 800w, images/43x_3-p-1080.png 1080w, images/43x_3.png 1569w">
         </div>
         <div class="container-p-box-b">
           <div class="container-p-box-b-item-a">
-            <div class="icon-box-a" data-ix="animate-on-scroll-b"><img class="icon-pic-a" src="images/13x_8.png">
+            <div class="icon-box-a" data-ix="animate-on-scroll-b"><img class="icon-pic-a" src="images/-3x.png">
             </div>
           </div>
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-c">
-            <h2>Visualize and analyze your customer journeys</h2>
-            <div class="div-block-23"></div>
+            <h2>Segment and send notifications</h2>
           </div>
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-d">
-            <div>Funnels can be a great way to get your audience to take actions. By carefully planning out a strategy and make up a series of steps to take them from app awareness all the way to brand loyalty.</div>
+            <div>With easy segmentation, you can select a group of users, and send directed, targeted push notifications to let them come back to your mobile application.</div>
           </div>
         </div>
         <div class="div-block-8">
@@ -74,19 +72,18 @@ $title = "TODO";
         </div>
       </div>
       <div class="container-p container-p-reverse">
-        <div class="container-p-box-a" data-ix="animate-on-scroll-a"><img class="image-3" sizes="(max-width: 479px) 100vw, (max-width: 767px) 384.859375px, (max-width: 991px) 41vw, 42vw" src="images/5-copy3x.png" srcset="images/5-copy3x-p-500.png 500w, images/5-copy3x-p-800.png 800w, images/5-copy3x-p-1080.png 1080w, images/5-copy3x-p-1600.png 1600w, images/5-copy3x.png 1755w">
+        <div class="container-p-box-a" data-ix="animate-on-scroll-a"><img class="image-3" sizes="(max-width: 479px) 100vw, (max-width: 767px) 320.015625px, (max-width: 991px) 41vw, 42vw" src="images/4-copy3x.png" srcset="images/4-copy3x-p-500.png 500w, images/4-copy3x-p-800.png 800w, images/4-copy3x-p-1080.png 1080w, images/4-copy3x.png 1569w">
         </div>
         <div class="container-p-box-b">
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-b">
-            <div class="icon-box-a"><img class="icon-pic-a" src="images/1-copy3x.png">
+            <div class="icon-box-a"><img class="icon-pic-a" src="images/--copy-23x.png">
             </div>
           </div>
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-c">
-            <h2>Create Funnels with ease</h2>
-            <div class="div-block-23"></div>
+            <h2>Customized notification content</h2>
           </div>
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-d">
-            <div>Select an event you want to analyze and add other events relevant to it to see full picture of the flow, such as how many users in it and events count. And dig a bit more with Filters to view or schedule those users.</div>
+            <div>Send notifications immediately, or at a scheduled time.</div>
           </div>
         </div>
         <div class="div-block-8">
@@ -96,19 +93,18 @@ $title = "TODO";
         </div>
       </div>
       <div class="container-p">
-        <div class="container-p-box-a" data-ix="animate-on-scroll-a"><img class="image-3" sizes="(max-width: 479px) 100vw, (max-width: 767px) 384.859375px, (max-width: 991px) 41vw, 42vw" src="images/63x_3.png" srcset="images/63x_3-p-500.png 500w, images/63x_3-p-800.png 800w, images/63x_3-p-1080.png 1080w, images/63x_3-p-1600.png 1600w, images/63x_3.png 1755w">
+        <div class="container-p-box-a" data-ix="animate-on-scroll-a"><img class="image-3" sizes="(max-width: 479px) 100vw, (max-width: 767px) 320.015625px, (max-width: 991px) 41vw, 42vw" src="images/4-copy-23x.png" srcset="images/4-copy-23x-p-500.png 500w, images/4-copy-23x-p-800.png 800w, images/4-copy-23x-p-1080.png 1080w, images/4-copy-23x.png 1569w">
         </div>
         <div class="container-p-box-b">
           <div class="container-p-box-b-item-a">
-            <div class="icon-box-a" data-ix="animate-on-scroll-b"><img class="icon-pic-a" src="images/1-copy-23x.png">
+            <div class="icon-box-a" data-ix="animate-on-scroll-b"><img class="icon-pic-a" src="images/copy3x.png">
             </div>
           </div>
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-c">
-            <h2>Target segments when required</h2>
-            <div class="div-block-23"></div>
+            <h2>Increase engagement</h2>
           </div>
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-d">
-            <div>Create Segments the same way as Funnels and target those segments whenever required.</div>
+            <div>&nbsp;Make an announcement, or deliver news update about your app or content within a flash of a second and increase the engagement.</div>
           </div>
         </div>
         <div class="div-block-8">
@@ -119,7 +115,7 @@ $title = "TODO";
       </div>
     </div>
   </div>
-  
+
   <?php include 'features.php'; ?>
   <?php include 'customers.php'; ?>
 
