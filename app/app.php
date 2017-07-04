@@ -40,7 +40,7 @@ $app->get('/', function ($request, $response) use ($app, $prismic) {
 
   
   //1 11 2 6 7 8 9 10 5 4  
-  $ids = ['4','1','5','6', '7', '8', '9', '10', '11','12'];
+  $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
   $features_menu = $api->query(
       Predicates::in('my.features_item.uid', $ids)
   );
@@ -51,16 +51,6 @@ $app->get('/', function ($request, $response) use ($app, $prismic) {
     [ 'orderings' => '[my.features_item.uid]' ]
   );
   
-  // If there is no bloghome content, display 404 page
-  /*
-  if ( $bloghomeContent == null ) {
-    not_found($app);
-    return;
-  }
-  */
-  
-  // Render the homepage
-  //render($app, 'main', array('bloghome' => $bloghomeContent, 'posts' => $posts->getResults()));
   render(
     $app, 'main', 
     array(
@@ -71,6 +61,168 @@ $app->get('/', function ($request, $response) use ($app, $prismic) {
   );
 
 });
+
+
+// Geo Distributions page
+$app->get('/geo-distribution', function ($request, $response) use ($app, $prismic) {
+
+  // Query the API for the homepage content and all the posts
+  $api = $prismic->get_api();
+  //$bloghomeContent = $api->getSingle('bloghome');
+  $clients = $api->query(Predicates::at("document.type", "c"));
+
+  
+  //1 11 2 6 7 8 9 10 5 4  
+  $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
+  $features_menu = $api->query(
+      Predicates::in('my.features_item.uid', $ids)
+  );
+  
+
+  $features_items = $api->query(
+    Predicates::at('document.type', 'features_item'),
+    [ 'orderings' => '[my.features_item.uid]' ]
+  );
+  
+  render(
+    $app, 'geo-distribution', 
+    array(
+      'clients' => $clients->getResults(),
+      'features_items' => $features_items->getResults(),
+      'features_menu' => $features_menu->getResults(),
+    ) 
+  );
+
+});
+
+// Geo Distributions page
+$app->get('/analytics', function ($request, $response) use ($app, $prismic) {
+
+  // Query the API for the homepage content and all the posts
+  $api = $prismic->get_api();
+  //$bloghomeContent = $api->getSingle('bloghome');
+  $clients = $api->query(Predicates::at("document.type", "c"));
+
+  
+  //1 11 2 6 7 8 9 10 5 4  
+  $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
+  $features_menu = $api->query(
+      Predicates::in('my.features_item.uid', $ids)
+  );
+  
+
+  $features_items = $api->query(
+    Predicates::at('document.type', 'features_item'),
+    [ 'orderings' => '[my.features_item.uid]' ]
+  );
+  
+  render(
+    $app, 'analytics', 
+    array(
+      'clients' => $clients->getResults(),
+      'features_items' => $features_items->getResults(),
+      'features_menu' => $features_menu->getResults(),
+    ) 
+  );
+
+});
+
+// Users Profiles page
+$app->get('/users_profiles', function ($request, $response) use ($app, $prismic) {
+
+  // Query the API for the homepage content and all the posts
+  $api = $prismic->get_api();
+  //$bloghomeContent = $api->getSingle('bloghome');
+  $clients = $api->query(Predicates::at("document.type", "c"));
+
+  
+  //1 11 2 6 7 8 9 10 5 4  
+  $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
+  $features_menu = $api->query(
+      Predicates::in('my.features_item.uid', $ids)
+  );
+  
+
+  $features_items = $api->query(
+    Predicates::at('document.type', 'features_item'),
+    [ 'orderings' => '[my.features_item.uid]' ]
+  );
+  
+  render(
+    $app, 'users_profiles', 
+    array(
+      'clients' => $clients->getResults(),
+      'features_items' => $features_items->getResults(),
+      'features_menu' => $features_menu->getResults(),
+    ) 
+  );
+
+});
+
+// Users Profiles page
+$app->get('/events', function ($request, $response) use ($app, $prismic) {
+
+  // Query the API for the homepage content and all the posts
+  $api = $prismic->get_api();
+  //$bloghomeContent = $api->getSingle('bloghome');
+  $clients = $api->query(Predicates::at("document.type", "c"));
+
+  
+  //1 11 2 6 7 8 9 10 5 4  
+  $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
+  $features_menu = $api->query(
+      Predicates::in('my.features_item.uid', $ids)
+  );
+  
+
+  $features_items = $api->query(
+    Predicates::at('document.type', 'features_item'),
+    [ 'orderings' => '[my.features_item.uid]' ]
+  );
+  
+  render(
+    $app, 'events', 
+    array(
+      'clients' => $clients->getResults(),
+      'features_items' => $features_items->getResults(),
+      'features_menu' => $features_menu->getResults(),
+    ) 
+  );
+
+});
+
+// Users Profiles page
+$app->get('/funnels-and-segments', function ($request, $response) use ($app, $prismic) {
+
+  // Query the API for the homepage content and all the posts
+  $api = $prismic->get_api();
+  //$bloghomeContent = $api->getSingle('bloghome');
+  $clients = $api->query(Predicates::at("document.type", "c"));
+
+  
+  //1 11 2 6 7 8 9 10 5 4  
+  $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
+  $features_menu = $api->query(
+      Predicates::in('my.features_item.uid', $ids)
+  );
+  
+
+  $features_items = $api->query(
+    Predicates::at('document.type', 'features_item'),
+    [ 'orderings' => '[my.features_item.uid]' ]
+  );
+  
+  render(
+    $app, 'funnels-and-segments', 
+    array(
+      'clients' => $clients->getResults(),
+      'features_items' => $features_items->getResults(),
+      'features_menu' => $features_menu->getResults(),
+    ) 
+  );
+
+});
+
 
 // Help Page
 $app->get('/help', function ($request, $response) use ($app, $prismic) {
