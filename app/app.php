@@ -64,7 +64,7 @@ $app->get('/', function ($request, $response) use ($app, $prismic) {
 
 
 // Geo Distributions page
-$app->get('/geo-distribution', function ($request, $response) use ($app, $prismic) {
+$app->get('/{route:|geo-distribution|geo-distribution/}', function ($request, $response) use ($app, $prismic) {
 
   // Query the API for the homepage content and all the posts
   $api = $prismic->get_api();
@@ -96,7 +96,7 @@ $app->get('/geo-distribution', function ($request, $response) use ($app, $prismi
 });
 
 // Geo Distributions page
-$app->get('/analytics', function ($request, $response) use ($app, $prismic) {
+$app->get('/{route:|analytics|analytics/}', function ($request, $response) use ($app, $prismic) {
 
   // Query the API for the homepage content and all the posts
   $api = $prismic->get_api();
@@ -128,7 +128,7 @@ $app->get('/analytics', function ($request, $response) use ($app, $prismic) {
 });
 
 // Users Profiles page
-$app->get('/users_profiles', function ($request, $response) use ($app, $prismic) {
+$app->get('/{route:|users_profiles|users_profiles/}', function ($request, $response) use ($app, $prismic) {
 
   // Query the API for the homepage content and all the posts
   $api = $prismic->get_api();
@@ -160,7 +160,7 @@ $app->get('/users_profiles', function ($request, $response) use ($app, $prismic)
 });
 
 // Users Profiles page
-$app->get('/events', function ($request, $response) use ($app, $prismic) {
+$app->get('/{route:|events|events/}', function ($request, $response) use ($app, $prismic) {
 
   // Query the API for the homepage content and all the posts
   $api = $prismic->get_api();
@@ -192,7 +192,7 @@ $app->get('/events', function ($request, $response) use ($app, $prismic) {
 });
 
 // Users Profiles page
-$app->get('/funnels-and-segments', function ($request, $response) use ($app, $prismic) {
+$app->get('/{route:|funnels-and-segments|funnels-and-segments/}', function ($request, $response) use ($app, $prismic) {
 
   // Query the API for the homepage content and all the posts
   $api = $prismic->get_api();
