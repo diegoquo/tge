@@ -64,7 +64,7 @@ $app->get('/', function ($request, $response) use ($app, $prismic) {
 
 
 // Geo Distributions page
-$app->get('/{route:|geo-distribution|geo-distribution/}', function ($request, $response) use ($app, $prismic) {
+$app->get('/geo-distribution', function ($request, $response) use ($app, $prismic) {
 
   // Query the API for the homepage content and all the posts
   $api = $prismic->get_api();
@@ -96,7 +96,7 @@ $app->get('/{route:|geo-distribution|geo-distribution/}', function ($request, $r
 });
 
 // Geo Distributions page
-$app->get('/{route:|analytics|analytics/}', function ($request, $response) use ($app, $prismic) {
+$app->get('/analytics', function ($request, $response) use ($app, $prismic) {
 
   // Query the API for the homepage content and all the posts
   $api = $prismic->get_api();
@@ -128,7 +128,7 @@ $app->get('/{route:|analytics|analytics/}', function ($request, $response) use (
 });
 
 // Users Profiles page
-$app->get('/{route:|users_profiles|users_profiles/}', function ($request, $response) use ($app, $prismic) {
+$app->get('/users_profiles', function ($request, $response) use ($app, $prismic) {
 
   // Query the API for the homepage content and all the posts
   $api = $prismic->get_api();
@@ -160,7 +160,7 @@ $app->get('/{route:|users_profiles|users_profiles/}', function ($request, $respo
 });
 
 // Users Profiles page
-$app->get('/{route:|events|events/}', function ($request, $response) use ($app, $prismic) {
+$app->get('/events', function ($request, $response) use ($app, $prismic) {
 
   // Query the API for the homepage content and all the posts
   $api = $prismic->get_api();
@@ -192,7 +192,7 @@ $app->get('/{route:|events|events/}', function ($request, $response) use ($app, 
 });
 
 // Users Profiles page
-$app->get('/{route:|funnels-and-segments|funnels-and-segments/}', function ($request, $response) use ($app, $prismic) {
+$app->get('events', function ($request, $response) use ($app, $prismic) {
 
   // Query the API for the homepage content and all the posts
   $api = $prismic->get_api();
@@ -213,7 +213,7 @@ $app->get('/{route:|funnels-and-segments|funnels-and-segments/}', function ($req
   );
   
   render(
-    $app, 'funnels-and-segments', 
+    $app, 'events', 
     array(
       'clients' => $clients->getResults(),
       'features_items' => $features_items->getResults(),
@@ -222,6 +222,8 @@ $app->get('/{route:|funnels-and-segments|funnels-and-segments/}', function ($req
   );
 
 });
+
+
 
 
 // Help Page
