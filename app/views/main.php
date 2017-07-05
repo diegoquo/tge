@@ -13,6 +13,7 @@ $menu_learn = $WPGLOBAL['menu_learn'];
 $menu_doc = $WPGLOBAL['menu_doc'];
 $menu_user_guide = $WPGLOBAL['menu_user_guide'];
 $menu_help = $WPGLOBAL['menu_help'];
+$general_content = $WPGLOBAL['general_content'];
 
 $cont = 0;
 
@@ -27,10 +28,10 @@ $title = "TODO";
       <div class="nav-bar-a-container">
         <div class="nav-bar-a-box-a">
           <div>
-             
+             <?= $general_content->getText('general_content.header_bar') ? $general_content->getText('general_content.header_bar') : "Untitled" ?>
           </div>
         </div>
-        <div class="nav-bar-a-box-b"><a class="link-a" href="contact.html">Contact us</a>
+        <div class="nav-bar-a-box-b"><a class="link-a" href="/contact">Contact us</a>
         </div>
       </div>
     </div>

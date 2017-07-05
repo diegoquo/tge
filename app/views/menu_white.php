@@ -1,14 +1,15 @@
-  <div class="nav-bar-b" data-ix="animate-on-load-b">
+   <div class="bar-b-white-variation nav-bar-b">
     <div class="container w-container">
       <div class="nav-bar-b-container">
         <div class="nav-bar-b-box-a">
-          <a class="nav-bar-b-logo-container w-inline-block" href="/"><img class="nav-bar-b-logo" src="images/13x.png">
+          <a class="nav-bar-b-logo-container w-inline-block" href="/"><img class="nav-bar-b-logo" src="images/23x.png">
+          </a>
           </a>
           <div class="nav-bar-b-box-a-items-box">
-            <div class="nav-bar-b-item-a"><a class="link-b" data-ix="trigger-nav-sub-bar-b" href="/pricing">Pricing</a>
+            <div class="nav-bar-b-item-a"><a class="link-b link-b-black-variation" href="/pricing">Pricing</a>
             </div>
             <div class="nav-bar-b-item-b" data-ix="trigger-nav-sub-bar-a">
-              <div class="link-b">Features</div><img class="nav-bar-b-item-b-arrow-pic" src="images/13x_2.png">
+              <div class="link-b link-b-black-variation">Features</div><img class="nav-bar-b-item-b-arrow-pic nav-bar-b-item-b-arrow-pic-black-variation" src="images/13x_2.png">
               
               <div class="nav-bar-sub-menu-a">
                 
@@ -47,7 +48,7 @@
             </div>
 
             <div class="nav-bar-b-item-b" data-ix="trigger-nav-sub-bar-a">
-              <div class="link-b">Learn</div><img class="nav-bar-b-item-b-arrow-pic" src="images/13x_2.png">
+              <div class="link-b link-b-black-variation">Learn</div><img class="nav-bar-b-item-b-arrow-pic nav-bar-b-item-b-arrow-pic-black-variation" src="images/13x_2.png">
               <div class="nav-bar-sub-menu-a">
                 <div class="nav-bar-b-item-b-box-a" data-ix="close-nav-bar-item-b">
                   
@@ -71,7 +72,7 @@
               </div>
             </div>
             <div class="nav-bar-b-item-b" data-ix="trigger-nav-sub-bar-a">
-              <div class="link-b">Documentation</div><img class="nav-bar-b-item-b-arrow-pic" src="images/13x_2.png">
+             <div class="link-b link-b-black-variation">Documentation</div><img class="nav-bar-b-item-b-arrow-pic nav-bar-b-item-b-arrow-pic-black-variation" src="images/13x_2.png">
               <div class="nav-bar-sub-menu-a">
                 <div class="nav-bar-b-item-b-box-a" data-ix="close-nav-bar-item-b">
                   
@@ -95,7 +96,7 @@
               </div>
             </div>
             <div class="nav-bar-b-item-b" data-ix="trigger-nav-sub-bar-a">
-              <div class="link-b">User guide</div><img class="nav-bar-b-item-b-arrow-pic" src="images/13x_2.png">
+              <div class="link-b link-b-black-variation">User guide</div><img class="nav-bar-b-item-b-arrow-pic nav-bar-b-item-b-arrow-pic-black-variation" src="images/13x_2.png">
               <div class="nav-bar-sub-menu-a">
                 <div class="nav-bar-b-item-b-box-a" data-ix="close-nav-bar-item-b">
                   
@@ -118,7 +119,7 @@
               </div>
             </div>
             <div class="nav-bar-b-item-b" data-ix="trigger-nav-sub-bar-a">
-              <div class="link-b">Help</div><img class="nav-bar-b-item-b-arrow-pic" src="images/13x_2.png">
+              <div class="link-b link-b-black-variation">Help</div><img class="nav-bar-b-item-b-arrow-pic nav-bar-b-item-b-arrow-pic-black-variation" src="images/13x_2.png">
               <div class="nav-bar-sub-menu-a">
                 <div class="nav-bar-b-item-b-box-a" data-ix="close-nav-bar-item-b">
                   
