@@ -39,6 +39,8 @@ $app->get('/', function ($request, $response) use ($app, $prismic) {
   $api = $prismic->get_api();
 
   $generalContent = $api->getSingle('general_content');
+  $home = $api->getSingle('home');
+  
   
   $clients = $api->query(Predicates::at("document.type", "c"));
 
@@ -77,6 +79,7 @@ $app->get('/', function ($request, $response) use ($app, $prismic) {
   render(
     $app, 'main', 
     array(
+      'home' => $home,
       'general_content' => $generalContent,
       'clients' => $clients->getResults(),
       'features_items' => $features_items->getResults(),

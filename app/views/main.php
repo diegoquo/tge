@@ -14,6 +14,7 @@ $menu_doc = $WPGLOBAL['menu_doc'];
 $menu_user_guide = $WPGLOBAL['menu_user_guide'];
 $menu_help = $WPGLOBAL['menu_help'];
 $general_content = $WPGLOBAL['general_content'];
+$home = $WPGLOBAL['home'];
 
 $cont = 0;
 
@@ -45,10 +46,15 @@ $title = "TODO";
       <div class="hero-a-container">
         <div class="hero-a-box-a">
           <div class="hero-a-box-a-item-a" data-ix="animate-on-load-c">
-            <h1>Mobile App Analytics &amp; Engagement. Simplified.</h1>
+            <h1>
+              <?= $home->getText('home.featured_title') ? $home->getText('home.featured_title') : "Untitled" ?>
+            </h1>
           </div>
           <div class="hero-a-box-a-item-a" data-ix="animate-on-load-d">
-            <div class="p-big">Tapgage helps you get to know your users, analyze your audience, and engage with them. All at the same time.</div>
+            <div class="p-big">
+              <?= $home->getText('home.featured_description') ? $home->getText('home.featured_description') : "Untitled" ?>
+              
+            </div>
           </div>
           <div class="hero-a-box-a-item-a" data-ix="animate-on-load-e"><a class="button-b w-button" href="#">Let's get started</a>
           </div>
@@ -67,10 +73,13 @@ $title = "TODO";
     <div class="container w-container">
       <div class="container-a" data-ix="animate-on-scroll-b">
         <div class="container-a-item-a">
-          <h2>3 key points to get you started with Tapgage</h2>
+          <h2><?= $home->getText('home.title') ? $home->getText('home.title') : "Untitled" ?></h2>
         </div>
-        <div class="p-big">Evaluate how users perceive your app and improve your engagement campaigns accordingly.</div>
+        <div class="p-big">
+          <?= $home->getText('home.description') ? $home->getText('home.description') : "Untitled" ?>
+        </div>
       </div>
+
       <div class="section-a-container-b">
         <div class="container-b-item-a" data-ix="animate-on-scroll-c">
           <div class="container-b-item-a-sub-item-a">
@@ -115,19 +124,27 @@ $title = "TODO";
     <div class="container w-container">
       <div class="container-c" data-ix="animate-on-scroll-b">
         <div class="container-c-box-a">
-          <h4>Developer-Centric</h4>
+          <h4>
+          <?= $home->getText('home.white_box_title') ? $home->getText('home.white_box_title') : "Untitled" ?>
+          </h4>
         </div>
         <div class="container-c-box-b">
-          <div>We are developer-centric and listen to their pain actively and always try to resolve it. Tapgage is built to scale from root level and can accommodate both small and enterprise companies. We believe in simplicity, and with our platform you can get started in matter of minutes.</div>
+          <div>
+            <?= $home->getText('home.white_box_description') ? $home->getText('home.white_box_description') : "Untitled" ?>
+          </div>
         </div>
       </div>
       <div class="container-d">
         <div class="container-d-box-a" data-ix="animate-on-scroll-c">
           <div class="container-d-item-a">
-            <h2>What can Tapgage do?</h2>
+            <h2>
+            <?= $home->getText('home.blue_bottom_title') ? $home->getText('home.blue_bottom_title') : "Untitled" ?>
+            </h2>
           </div>
           <div class="container-d-item-a">
-            <div>Our service can help you analyze your users by different attributes like Active Vs Inactive, Old Vs New, Sessions, OS Version segmentation and more. Dig deeper into the stats. We make it easy and understandable.</div>
+            <div>
+              <?= $home->getText('home.blue_bottom_subtitle') ? $home->getText('home.blue_bottom_subtitle') : "Untitled" ?>
+            </div>
           </div>
         </div>
         <div class="container-d-box-b" data-ix="animate-on-scroll-d">
