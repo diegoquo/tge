@@ -1,3 +1,27 @@
+<?php
+
+$prismic = $WPGLOBAL['prismic'];
+if (isset($WPGLOBAL['pageContent'])) {
+  $pageContent = $WPGLOBAL['pageContent'];
+}
+
+$clients = $WPGLOBAL['clients'];
+
+$features_items = $WPGLOBAL['features_items'];
+$features_menu = $WPGLOBAL['features_menu'];
+$menu_learn = $WPGLOBAL['menu_learn'];
+$menu_doc = $WPGLOBAL['menu_doc'];
+$menu_user_guide = $WPGLOBAL['menu_user_guide'];
+$menu_help = $WPGLOBAL['menu_help'];
+$general_content = $WPGLOBAL['general_content'];
+$home = $WPGLOBAL['home'];
+
+$cont = $WPGLOBAL['cont'];
+
+$title = "TODO";
+
+?>
+  
   <div class="nav-bar-b" data-ix="animate-on-load-b">
     <div class="container w-container">
       <div class="nav-bar-b-container">
