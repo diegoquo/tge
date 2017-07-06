@@ -44,6 +44,7 @@
 
            
             <?php
+               $cont = 0;
                foreach ($features_items as $feature) { 
                 ++$cont;
             ?>
