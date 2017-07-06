@@ -151,8 +151,14 @@
           </a>
         </div>
         <div class="nav-bar-b-box-b">
-          <div class="nav-bar-b-item-a"><a class="link-b" href="login.html">Login</a>
-          </div><a class="button-a w-button" href="sign-up.html">Sign up</a>
+          <div class="nav-bar-b-item-a">
+          <a class="link-b" href="login.html">
+            <?= $general_content->getText('general_content.login_line') ? $general_content->getText('general_content.login_line') : "Untitled" ?>
+          </a>
+          </div>
+          <a class="button-a w-button" href="sign-up.html">
+            <?= $general_content->getText('general_content.sign_up_line') ? $general_content->getText('general_content.sign_up_line') : "Untitled" ?>
+          </a>
         </div>
       </div>
     </div>

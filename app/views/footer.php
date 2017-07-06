@@ -56,13 +56,19 @@
       <div class="footer-container-b" data-ix="animate-on-scroll-d">
         <div class="footer-container-b-box-a" data-ix="animate-on-scroll-e">
           <div>
-          
+           <?= $general_content->getText('general_content.copyright') ? $general_content->getText('general_content.copyright') : "Untitled" ?>
           
           </div>
           <a class="footer-link-b" href="/terms-of-service">Terms of service</a>
           <a class="footer-link-b" href="/privacy-policy">Privacy Policy</a>
         </div>
-        <div class="footer-container-b-box-b" data-ix="animate-on-scroll-e"><a class="footer-link-c" href="login.html">Login</a><a class="button-a w-button" href="sign-up.html">Sign up</a>
+        <div class="footer-container-b-box-b" data-ix="animate-on-scroll-e">
+        <a class="footer-link-c" href="login.html">
+        <?= $general_content->getText('general_content.login_line') ? $general_content->getText('general_content.login_line') : "Untitled" ?>
+        </a>
+        <a class="button-a w-button" href="sign-up.html">
+        <?= $general_content->getText('general_content.sign_up_line') ? $general_content->getText('general_content.sign_up_line') : "Untitled" ?>
+        </a>
         </div>
       </div>
     </div>

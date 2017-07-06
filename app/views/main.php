@@ -56,7 +56,11 @@ $title = "TODO";
               
             </div>
           </div>
-          <div class="hero-a-box-a-item-a" data-ix="animate-on-load-e"><a class="button-b w-button" href="#">Let's get started</a>
+          <div class="hero-a-box-a-item-a" data-ix="animate-on-load-e">
+          <!--?= $home->getLink('home.hero_button_url')->getUrl($linkResolver) ?-->
+          <a class="button-b w-button" href="#">
+            <?= $home->getText('home.hero_button_headline') ? $home->getText('home.hero_button_headline') : "Untitled" ?>
+          </a>
           </div>
         </div>
         <div class="hero-a-box-b">
@@ -81,42 +85,29 @@ $title = "TODO";
       </div>
 
       <div class="section-a-container-b">
+        
+        <? foreach($home->getGroup('home.features_items')->getArray() as $item) { ?>
+  
+         
         <div class="container-b-item-a" data-ix="animate-on-scroll-c">
+          
           <div class="container-b-item-a-sub-item-a">
-            <a class="icon-box-a w-inline-block" href="#"><img class="icon-pic-a" src="images/-13x.png">
+            <a class="icon-box-a w-inline-block" href="#">
+            <img class="icon-pic-a" src="<?= $item->getImage("feature_item_icon")->getUrl() ?>">
             </a>
           </div>
           <div class="container-b-item-a-sub-item-a">
-            <h4>Discover what your users do</h4>
+            <h4><?= $item->getText('feature_item_headline') ? $item->getText('feature_item_headline') : "Untitled" ?></h4>
           </div>
           <div class="container-b-item-a-sub-item-a">
-            <div>Our powerful programmatic analytics helps you understand the behavior of your users and improve your app.</div>
+            <div>
+              <?= $item->getText('feature_item_description') ? $item->getText('feature_item_description') : "Untitled" ?>
+            </div>
           </div>
         </div>
-        <div class="container-b-item-a" data-ix="animate-on-scroll-d">
-          <div class="container-b-item-a-sub-item-a">
-            <a class="icon-box-a w-inline-block" href="#"><img class="icon-pic-a" src="images/-1-copy3x.png">
-            </a>
-          </div>
-          <div class="container-b-item-a-sub-item-a">
-            <h4>Engage with your users&nbsp;</h4>
-          </div>
-          <div class="container-b-item-a-sub-item-a">
-            <div>Develop long lasting relationships with your customers by delivering relevant experiences at every interaction.</div>
-          </div>
-        </div>
-        <div class="container-b-item-a" data-ix="animate-on-scroll-e">
-          <div class="container-b-item-a-sub-item-a">
-            <a class="icon-box-a w-inline-block" href="#"><img class="icon-pic-a" src="images/-1-copy-23x.png">
-            </a>
-          </div>
-          <div class="container-b-item-a-sub-item-a">
-            <h4>Optimize your marketing efforts</h4>
-          </div>
-          <div class="container-b-item-a-sub-item-a">
-            <div>Turn your metrics into marketing goals, see what works and what doesn’t and with this information, get an idea of what you can do to retain the users.</div>
-          </div>
-        </div>
+        
+        <? } ?>
+
       </div>
     </div>
   </div>
@@ -148,18 +139,8 @@ $title = "TODO";
           </div>
         </div>
         <div class="container-d-box-b" data-ix="animate-on-scroll-d">
-          <div class="container-d-item-a">
-            <h4>Knowing and analyzing your app customers should not be complicated</h4>
-            <div>Tapgage is a simple mobile app analytics platform, which integrates mobile analytics and engagement for mobile developers.</div>
-          </div>
-          <div class="container-d-item-a">
-            <h4>We make it easy and understandable</h4>
-            <div>Tapgage lets you know each customer with great detail, see what they do inside your app, for how long, what they like and dislike and the reason why they might leave/uninstall your app.</div>
-          </div>
-          <div class="container-d-item-a">
-            <h4>Engage with customers in multiple simple ways</h4>
-            <div>Tapgage lets you engage with customers in multiple ways - through push notifications, in-app messages, SMS or email.</div>
-          </div>
+
+        <?= $home->getStructuredText("home.blue_bottom_description")->asHtml($resolver); ?>
         </div>
       </div>
     </div>
