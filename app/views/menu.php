@@ -20,8 +20,7 @@ $cont = $WPGLOBAL['cont'];
 
 $title = "TODO";
 
-?>
-  
+?>  
   <div class="nav-bar-b" data-ix="animate-on-load-b">
     <div class="container w-container">
       <div class="nav-bar-b-container">
