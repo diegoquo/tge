@@ -743,6 +743,64 @@ $app->get('/email-marketing', function ($request, $response) use ($app, $prismic
 
 });
 
+// Index page
+$app->get('/all_features', function ($request, $response) use ($app, $prismic) {
+
+  // Query the API for the homepage content and all the posts
+  $api = $prismic->get_api();
+
+  $generalContent = $api->getSingle('general_content');
+  
+  $clients = $api->query(Predicates::at("document.type", "c"));
+
+  //1 11 2 6 7 8 9 10 5 4  
+  $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
+  $features_menu = $api->query(
+      Predicates::in('my.features_item.uid', $ids)
+  );
+
+  $menu_learn = $api->query(
+    Predicates::at('document.type', 'menu_learn'),
+    [ 'orderings' => '[my.menu_learn.uid]' ]
+  );
+
+  $menu_doc = $api->query(
+    Predicates::at('document.type', 'menu_doc'),
+    [ 'orderings' => '[my.menu_doc.uid]' ]
+  );
+
+  $menu_user_guide = $api->query(
+    Predicates::at('document.type', 'menu_user_guide'),
+    [ 'orderings' => '[my.menu_user_guide.uid]' ]
+  );
+
+  $menu_help = $api->query(
+    Predicates::at('document.type', 'menu_help'),
+    [ 'orderings' => '[my.menu_help.uid]' ]
+  );
+  
+
+  $features_items = $api->query(
+    Predicates::at('document.type', 'features_item'),
+    [ 'orderings' => '[my.features_item.uid]' ]
+  );
+  
+  render(
+    $app, 'all_features', 
+    array(
+      'general_content' => $generalContent,
+      'clients' => $clients->getResults(),
+      'features_items' => $features_items->getResults(),
+      'features_menu' => $features_menu->getResults(),
+      'menu_learn' => $menu_learn->getResults(),
+      'menu_doc' => $menu_doc->getResults(),
+      'menu_user_guide' => $menu_user_guide->getResults(),
+      'menu_help' => $menu_help->getResults(),
+    ) 
+  );
+
+});
+
 
 // Index page
 $app->get('/terms-of-service', function ($request, $response) use ($app, $prismic) {

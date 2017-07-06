@@ -35,7 +35,7 @@
                   
                   </div>
                   
-                  <a class="nav-bar-b-item-c-sub-item-b w-inline-block" href="features.html">
+                  <a class="nav-bar-b-item-c-sub-item-b w-inline-block" href="/all_features">
                     <div class="nav-bar-b-item-c-sub-item-b-sub-item-a">
                       <div class="nav-bar-b-link-a">All features</div>
                       <div>Get line of credit with absolutely 0% interest forever.</div>
