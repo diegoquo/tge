@@ -56,7 +56,7 @@
       <div class="footer-container-b" data-ix="animate-on-scroll-d">
         <div class="footer-container-b-box-a" data-ix="animate-on-scroll-e">
           <div>
-          <?= $general_content->getText('general_content.copyright') ? $general_content->getText('general_content.copyright') : "Untitled" ?>
+          
           
           </div>
           <a class="footer-link-b" href="/terms-of-service">Terms of service</a>
