@@ -16,6 +16,7 @@ $menu_help = $WPGLOBAL['menu_help'];
 $general_content = $WPGLOBAL['general_content'];
 $home = $WPGLOBAL['home'];
 
+$cont = 0;
 
 $title = "TODO";
 
@@ -106,7 +107,6 @@ $title = "TODO";
         </div>
         
         <?php } ?>
-        
 
       </div>
     </div>
@@ -140,7 +140,8 @@ $title = "TODO";
         </div>
         <div class="container-d-box-b" data-ix="animate-on-scroll-d">
 
-        <?= $home->getStructuredText("home.blue_bottom_description")->asHtml($resolver); ?>
+        
+
         </div>
       </div>
     </div>
