@@ -80,7 +80,7 @@
                   <a class="link-block-3 w-inline-block" href="">
                     <div class="nav-bar-icon-box-a">
                       <div class="icon-box-a"><img class="icon-pic-b" 
-                           src="">
+                           src="<?= $mnu_doc->getImage('menu_doc.menu_icon')->getUrl() ?>">
                       </div>
                       <div class="nav-bar-icon-box-a-item-a">
                         <div class="nav-bar-link-b">
@@ -152,7 +152,7 @@
           </a>
         </div>
         <div class="nav-bar-b-box-b">
-          <div class="nav-bar-b-item-a"><a class="link-b" href="login.html">Login</a>
+          <div class="nav-bar-b-item-a"><a class="link-b link-b-black-variation" href="login.html">Login</a>
           </div><a class="button-a w-button" href="sign-up.html">Sign up</a>
         </div>
       </div>
