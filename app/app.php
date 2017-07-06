@@ -19,7 +19,7 @@ use Prismic\Predicates;
 
 require_once 'includes/http.php';
 
-/*
+
 $apiEndpoint = $WPGLOBAL['app']->getContainer()->get('settings')['prismic.url'];
 $repoEndpoint = str_replace("/api", "", $apiEndpoint);
 $url = $repoEndpoint . '/app/settings/onboarding/run';
@@ -30,7 +30,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, array("language=php&framework=slim"));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $result=curl_exec ($ch);
 curl_close ($ch);
-*/
+
 
 // Index page
 $app->get('/', function ($request, $response) use ($app, $prismic) {
