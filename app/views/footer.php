@@ -63,10 +63,10 @@
           <a class="footer-link-b" href="/privacy-policy">Privacy Policy</a>
         </div>
         <div class="footer-container-b-box-b" data-ix="animate-on-scroll-e">
-        <a class="footer-link-c" href="login.html">
+        <a class="footer-link-c" href="/login">
         <?= $general_content->getText('general_content.login_line') ? $general_content->getText('general_content.login_line') : "Untitled" ?>
         </a>
-        <a class="button-a w-button" href="sign-up.html">
+        <a class="button-a w-button" href="/sign-up">
         <?= $general_content->getText('general_content.sign_up_line') ? $general_content->getText('general_content.sign_up_line') : "Untitled" ?>
         </a>
         </div>

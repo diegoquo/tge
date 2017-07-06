@@ -920,9 +920,6 @@ $app->get('/pricing', function ($request, $response) use ($app, $prismic) {
 
 });
 
-
-
-
 // Index page
 $app->get('/privacy-policy', function ($request, $response) use ($app, $prismic) {
 
@@ -982,6 +979,42 @@ $app->get('/privacy-policy', function ($request, $response) use ($app, $prismic)
   );
 
 });
+
+
+// Index page
+$app->get('/login', function ($request, $response) use ($app, $prismic) {
+
+  // Query the API for the homepage content and all the posts
+  $api = $prismic->get_api();
+
+  $generalContent = $api->getSingle('general_content');
+  
+  render(
+    $app, 'login', 
+    array(
+      'general_content' => $generalContent,
+    ) 
+  );
+
+});
+
+// Index page
+$app->get('/sign-up', function ($request, $response) use ($app, $prismic) {
+
+  // Query the API for the homepage content and all the posts
+  $api = $prismic->get_api();
+
+  $generalContent = $api->getSingle('general_content');
+  
+  render(
+    $app, 'sign-up', 
+    array(
+      'general_content' => $generalContent,
+    ) 
+  );
+
+});
+
 
 
 // Help Page

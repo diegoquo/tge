@@ -152,8 +152,8 @@
           </a>
         </div>
         <div class="nav-bar-b-box-b">
-          <div class="nav-bar-b-item-a"><a class="link-b link-b-black-variation" href="login.html">Login</a>
-          </div><a class="button-a w-button" href="sign-up.html">Sign up</a>
+          <div class="nav-bar-b-item-a"><a class="link-b link-b-black-variation" href="/login">Login</a>
+          </div><a class="button-a w-button" href="/sign-up">Sign up</a>
         </div>
       </div>
     </div>
