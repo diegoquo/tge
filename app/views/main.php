@@ -140,7 +140,7 @@ $title = "TODO";
         </div>
         <div class="container-d-box-b" data-ix="animate-on-scroll-d">
 
-        
+        <?= $home->getStructuredText("home.blue_bottom_description")->asHtml($resolver); ?>
 
         </div>
       </div>

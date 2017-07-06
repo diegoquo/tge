@@ -1,25 +1,4 @@
-<?php
-
-$prismic = $WPGLOBAL['prismic'];
-if (isset($WPGLOBAL['pageContent'])) {
-  $pageContent = $WPGLOBAL['pageContent'];
-}
-
-$clients = $WPGLOBAL['clients'];
-
-$features_items = $WPGLOBAL['features_items'];
-$features_menu = $WPGLOBAL['features_menu'];
-$menu_learn = $WPGLOBAL['menu_learn'];
-$menu_doc = $WPGLOBAL['menu_doc'];
-$menu_user_guide = $WPGLOBAL['menu_user_guide'];
-$menu_help = $WPGLOBAL['menu_help'];
-$general_content = $WPGLOBAL['general_content'];
-$home = $WPGLOBAL['home'];
-
-$title = "TODO";
-
-?>  
-  <div class="nav-bar-b" data-ix="animate-on-load-b">
+ <div class="nav-bar-b" data-ix="animate-on-load-b">
     <div class="container w-container">
       <div class="nav-bar-b-container">
         <div class="nav-bar-b-box-a">
@@ -100,7 +79,7 @@ $title = "TODO";
                   <a class="link-block-3 w-inline-block" href="">
                     <div class="nav-bar-icon-box-a">
                       <div class="icon-box-a"><img class="icon-pic-b" 
-                           src="">
+                           src="<?= $mnu_doc->getImage('menu_doc.menu_icon')->getUrl() ?>">
                       </div>
                       <div class="nav-bar-icon-box-a-item-a">
                         <div class="nav-bar-link-b">
