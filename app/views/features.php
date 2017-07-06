@@ -60,7 +60,7 @@
                 <div class="tab-1-item-a">
                 <img class="image" 
                      data-ix="tabs-1" 
-                     src="<?= $feature->getImage('features_item.featured_image')->getUrl() ?>" />
+                     src="" />
                 </div>
                 
                 </div>
@@ -78,7 +78,7 @@
                 <a 
                 class="button-b w-button" 
                 data-ix="tabs-2" 
-                href="<?= $feature->getLink('features_item.link')->getUrl($linkResolver) ?>">Learn more</a>
+                href="">Learn more</a>
 
               </div>
             </div>
