@@ -60,7 +60,7 @@
                 <div class="tab-1-item-a">
                 <img class="image" 
                      data-ix="tabs-1" 
-                     src="" />
+                     src="<?= $feature->getImage("features_item.featured_image")->getUrl() ?>" />
                 </div>
                 
                 </div>
