@@ -57,7 +57,7 @@
                      href="#" />
                     <div class="nav-bar-icon-box-a">
                       <div class="icon-box-a"><img class="icon-pic-b" 
-                           src="" />
+                           src="<?= $mnu_learn->getImage('menu_learn.menu_icon')->getUrl() ?>" />
                       </div>
                       <div class="nav-bar-icon-box-a-item-a">
                         <div class="nav-bar-link-b">
