@@ -93,7 +93,7 @@ $title = "TODO";
           
           <div class="container-b-item-a-sub-item-a">
             <a class="icon-box-a w-inline-block" href="#">
-            <img class="icon-pic-a" src="<!--?= $item->getImage("feature_item_icon")->getUrl() ?-->">
+            <img class="icon-pic-a" src="<?= $item->getImage("feature_item_icon")->getUrl() ?>">
             </a>
           </div>
           <div class="container-b-item-a-sub-item-a">
