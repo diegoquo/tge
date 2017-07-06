@@ -16,7 +16,7 @@ $menu_help = $WPGLOBAL['menu_help'];
 $general_content = $WPGLOBAL['general_content'];
 $home = $WPGLOBAL['home'];
 
-$cont = 0;
+$cont = $WPGLOBAL['cont'];
 
 $title = "TODO";
 
