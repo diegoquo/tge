@@ -85,7 +85,7 @@ $title = "TODO";
 
       <div class="section-a-container-b">
         
-        <? foreach($home->getGroup('home.features_items')->getArray() as $item) { ?>
+        <?php foreach($home->getGroup('home.features_items')->getArray() as $item) { ?>
   
          
         <div class="container-b-item-a" data-ix="animate-on-scroll-c">
@@ -106,6 +106,7 @@ $title = "TODO";
         </div>
         
         <? } ?>
+        
 
       </div>
     </div>
