@@ -53,7 +53,7 @@
                   
                   <?php foreach ($menu_learn as $mnu_learn) { ?>
                   <a class="link-block-3 w-inline-block" 
-                     href="#" />
+                     href="<?= $mnu_learn->getLink('menu_learn.menu_link')->getUrl($linkResolver) ?>" />
                     <div class="nav-bar-icon-box-a">
                       <div class="icon-box-a"><img class="icon-pic-b" 
                            src="<?= $mnu_learn->getImage('menu_learn.menu_icon')->getUrl() ?>" />
