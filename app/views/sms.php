@@ -32,7 +32,7 @@ $title = "TODO";
           <div>Schedule a 1:1 product walkthrough<span> with a mobile marketing expert and learn how to optimally segment, track and engage app users in real-time.</span>
           </div>
         </div>
-        <div class="nav-bar-a-box-b"><a class="link-a" href="contact.html">Contact us</a>
+        <div class="nav-bar-a-box-b"><a class="link-a" href="/contact">Contact us</a>
         </div>
       </div>
     </div>
