@@ -3,7 +3,7 @@
       <div class="mobile-menu-container-a">
         <div class="footer-container-box-a" data-ix="animate-on-scroll-b">
           <div class="footer-container-a-box-a-item-a">
-            <a class="footer-logo-link-box w-inline-block" href="index.html"><img class="footer-logo-pic" src="images/23x.png">
+            <a class="footer-logo-link-box w-inline-block" href="index.html"><img class="footer-logo-pic" src="/images/23x.png">
             </a>
           </div>
           <div class="footer-container-a-box-a-item-a">
@@ -16,15 +16,15 @@
           <div class="footer-container-a-box-a-item-a">
             <div class="footer-headline">Follow us</div>
             <div>
-              <a class="link-block-4 w-inline-block" href="#"><img src="images/005-facebook-logo-button3x.png">
+              <a class="link-block-4 w-inline-block" href="#"><img src="/images/005-facebook-logo-button3x.png">
               </a>
-              <a class="link-block-4 w-inline-block" href="#"><img src="images/001-social-media3x.png">
+              <a class="link-block-4 w-inline-block" href="#"><img src="/images/001-social-media3x.png">
               </a>
-              <a class="link-block-4 w-inline-block" href="#"><img src="images/002-social-13x.png">
+              <a class="link-block-4 w-inline-block" href="#"><img src="/images/002-social-13x.png">
               </a>
-              <a class="link-block-4 w-inline-block" href="#"><img src="images/003-social3x.png">
+              <a class="link-block-4 w-inline-block" href="#"><img src="/images/003-social3x.png">
               </a>
-              <a class="link-block-4 w-inline-block" href="#"><img src="images/004-twitter-logo-button3x.png">
+              <a class="link-block-4 w-inline-block" href="#"><img src="/images/004-twitter-logo-button3x.png">
               </a>
             </div>
           </div>
@@ -74,7 +74,7 @@
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
-  <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="/js/webflow.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>

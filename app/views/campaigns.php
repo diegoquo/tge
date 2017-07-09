@@ -15,6 +15,8 @@ $menu_user_guide = $WPGLOBAL['menu_user_guide'];
 $menu_help = $WPGLOBAL['menu_help'];
 $general_content = $WPGLOBAL['general_content'];
 $home = $WPGLOBAL['home'];
+$campaigns = $WPGLOBAL['campaigns'];
+
 
 $cont = 0;
 
@@ -44,43 +46,64 @@ $title = "TODO";
     <div class="container w-container">
       <div class="section-hero-c-container-a" data-ix="animate-on-load-b">
         <div class="section-hero-c-container-a-item-a">
-          <h1>Campaigns</h1>
+          <h1>
+            <?= $campaigns->getText('campaigns.title') ? $campaigns->getText('campaigns.title') : "Untitled" ?>
+          </h1>
         </div>
         <div class="section-hero-c-container-a-item-a">
-          <div class="p-big">Choose the right promo campaigns to give your apps a boost when it needs it and keep on measuring to know what works and what doesn’t, improving your app and marketing it.</div>
+          <div class="p-big">
+            <?= $campaigns->getText('campaigns.subtitle') ? $campaigns->getText('campaigns.subtitle') : "Untitled" ?>
+          </div>
         </div>
       </div>
       <div class="div-block-6">
-        <div class="div-block-7"><img class="image-8" data-ix="animate-on-load-c" sizes="(max-width: 479px) 100vw, (max-width: 767px) 361px, (max-width: 991px) 434px, 795px" src="images/-53x_1.png" srcset="images/-53x_1-p-500.png 500w, images/-53x_1-p-800.png 800w, images/-53x_1-p-1080.png 1080w, images/-53x_1-p-1600.png 1600w, images/-53x_1-p-2000.png 2000w, images/-53x_1.png 2454w">
+        <div class="div-block-7">
+        <img class="image-8" src="<?= $campaigns->getImage('campaigns.featured_image')->getUrl() ?>" >
         </div>
       </div>
     </div>
   </div>
   <div class="section-h">
+    <?php 
+    $c=0;
+    foreach($campaigns->getGroup('campaigns.sub_item')->getArray() as $item) { 
+      if ($c == 0){
+        $c=1;
+      ?>
     <div class="container w-container">
       <div class="container-p">
-        <div class="container-p-box-a" data-ix="animate-on-scroll-a"><img class="image-3" sizes="(max-width: 479px) 100vw, (max-width: 767px) 383.546875px, (max-width: 991px) 41vw, 42vw" src="images/-63x_2.png" srcset="images/-63x_2-p-500.png 500w, images/-63x_2-p-800.png 800w, images/-63x_2-p-1080.png 1080w, images/-63x_2-p-1600.png 1600w, images/-63x_2.png 1749w">
+        <div class="container-p-box-a" data-ix="animate-on-scroll-a">
+        <img class="image-3" src="images/-63x_2.png">
         </div>
+        
         <div class="container-p-box-b">
           <div class="container-p-box-b-item-a">
-            <div class="icon-box-a" data-ix="animate-on-scroll-b"><img class="icon-pic-a" src="images/-13x_4.png">
+            <div class="icon-box-a" data-ix="animate-on-scroll-b">
+               <img class="icon-pic-a" src="<?= $item->getImage("featured_pic")->getUrl() ?>">
             </div>
           </div>
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-c">
-            <h2>Personalized Campaigns</h2>
+            <h2>
+              <?= $item->getText('headline') ? $item->getText('headline') : "Untitled" ?>
+            </h2>
           </div>
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-d">
-            <div>Remind new customers about features of your app and a welcome message to cheer them up for joining your app.</div>
+            <div>
+              <?= $item->getText('description') ? $item->getText('description') : "Untitled" ?>
+            </div>
           </div>
         </div>
+        
         <div class="div-block-8">
           <div class="abstract-b"></div>
           <div class="abstract-c"></div>
           <div class="abstract-a"></div>
         </div>
       </div>
+      <?php } else {?>
       <div class="container-p container-p-reverse">
-        <div class="container-p-box-a" data-ix="animate-on-scroll-a"><img class="image-3" sizes="(max-width: 479px) 100vw, (max-width: 767px) 383.546875px, (max-width: 991px) 41vw, 42vw" src="images/--83x.png" srcset="images/--83x-p-500.png 500w, images/--83x-p-800.png 800w, images/--83x-p-1080.png 1080w, images/--83x-p-1600.png 1600w, images/--83x.png 1749w">
+        <div class="container-p-box-a" data-ix="animate-on-scroll-a">
+        <img class="image-3" src="images/--83x.png" >
         </div>
         <div class="container-p-box-b">
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-b">
@@ -100,7 +123,9 @@ $title = "TODO";
           <div class="abstract-a"></div>
         </div>
       </div>
+      <?php } ?>
     </div>
+    <?php } ?>
   </div>
 
   <?php include 'features.php'; ?>

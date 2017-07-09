@@ -13,6 +13,8 @@ $menu_doc = $WPGLOBAL['menu_doc'];
 $menu_user_guide = $WPGLOBAL['menu_user_guide'];
 $menu_help = $WPGLOBAL['menu_help'];
 $general_content = $WPGLOBAL['general_content'];
+$blog_item = $WPGLOBAL['blog_item'];
+
 
 $cont = 0;
 
@@ -49,8 +51,16 @@ $title = "TODO";
       </div>
     </div>
   </div>
+
+  
   <div class="blog-section-b" data-ix="animate-on-load-b">
     <div class="container w-container">
+      <?php
+       $c=1; 
+       foreach ($blog_item as $post) { 
+        if ($c == 1){
+          $c=2;
+      ?>
       <div class="blog-container-a">
         <div class="blog-list-box-a">
           <a class="blog-list-box-item-a w-inline-block" href="#"></a>
@@ -59,121 +69,60 @@ $title = "TODO";
               <div class="blog-tag">
                 <div>Blog</div>
               </div>
-            </div><a class="blog-list-box-item-b-sub-item-a w-inline-block" href="#"><h2>Why we love Behavioral Segmentation</h2></a>
+            </div><a class="blog-list-box-item-b-sub-item-a w-inline-block" href="#"><h2>
+            <?= $post->getText('blog_item.headine') ? $post->getText('blog_item.headine') : "Untitled" ?></h2></a>
             <div class="blog-list-box-item-b-sub-item-a">
               <div class="blog-author-box">
                 <div class="blog-author-pic"></div>
-                <div>Greem Fullon</div>
+                <div><?= $post->getText('blog_item.author_name') ? $post->getText('blog_item.author_name') : "Untitled" ?></div>
               </div>
             </div>
             <div class="blog-list-box-item-b-sub-item-a">
-              <div>The attention span of today’s mobile user is shrinking at a very rapid pace. In 2000, we could boast of having an attention span of 15 seconds, however, since 2015, it has dropped down to 8 seconds – making our attention span shorter than a goldfish!</div>
+              <div>
+                  <div><?= $post->getText('blog_item.description') ? $post->getText('blog_item.description') : "Untitled" ?></div>
+              </div>
             </div>
-            <div class="blog-list-box-item-b-sub-item-b"><a class="button-b w-button" href="#">Read more</a>
+            <div class="blog-list-box-item-b-sub-item-b"><a class="button-b w-button" href="/blog_post/<?= $post->getUid() ?>">Read more</a>
             </div>
           </div>
         </div>
       </div>
+      
       <div class="blog-container-a">
+
+      <?php } else { ?>
+
+      
+        
         <div class="blog-list-block-b">
           <a class="link-block w-inline-block" href="#"></a>
-          <div class="div-block-9"><a class="blog-list-box-item-b-sub-item-a w-inline-block" href="#"><h3>Why we love Behavioral Segmentation</h3></a>
+          <div class="div-block-9"><a class="blog-list-box-item-b-sub-item-a w-inline-block" href="#"><h3><?= $post->getText('blog_item.headine') ? $post->getText('blog_item.headine') : "Untitled" ?></h3></a>
             <div class="blog-list-box-item-b-sub-item-a">
               <div class="blog-author-box">
                 <div class="blog-author-pic"></div>
-                <div>Greem Fullon</div>
+                <div><?= $post->getText('blog_item.author_name') ? $post->getText('blog_item.author_name') : "Untitled" ?></div>
               </div>
             </div>
             <div class="blog-list-box-item-b-sub-item-a">
-              <div>The attention span of today’s mobile user is shrinking at a very rapid pace. In 2000, we could boast of having an attention span of 15 seconds, however, since 2015, it has dropped down to 8 seconds – making our attention span shorter than a goldfish!</div>
-            </div>
-            <div class="blog-list-box-item-b-sub-item-b"><a class="button-b w-button" href="#">Read more</a>
-            </div>
-          </div>
-        </div>
-        <div class="blog-list-block-b">
-          <a class="link-block w-inline-block" href="#"></a>
-          <div class="div-block-9"><a class="blog-list-box-item-b-sub-item-a w-inline-block" href="#"><h3>Why we love Behavioral Segmentation</h3></a>
-            <div class="blog-list-box-item-b-sub-item-a">
-              <div class="blog-author-box">
-                <div class="blog-author-pic"></div>
-                <div>Greem Fullon</div>
+              <div>
+                <?= $post->getText('blog_item.description') ? $post->getText('blog_item.description') : "Untitled" ?>
               </div>
             </div>
-            <div class="blog-list-box-item-b-sub-item-a">
-              <div>The attention span of today’s mobile user is shrinking at a very rapid pace. In 2000, we could boast of having an attention span of 15 seconds, however, since 2015, it has dropped down to 8 seconds – making our attention span shorter than a goldfish!</div>
-            </div>
-            <div class="blog-list-box-item-b-sub-item-b"><a class="button-b w-button" href="#">Read more</a>
+            <div class="blog-list-box-item-b-sub-item-b"><a class="button-b w-button" href="/blog_post/<?= $post->getUid() ?>">Read more</a>
             </div>
           </div>
         </div>
-        <div class="blog-list-block-b">
-          <a class="link-block w-inline-block" href="#"></a>
-          <div class="div-block-9"><a class="blog-list-box-item-b-sub-item-a w-inline-block" href="#"><h3>Why we love Behavioral Segmentation</h3></a>
-            <div class="blog-list-box-item-b-sub-item-a">
-              <div class="blog-author-box">
-                <div class="blog-author-pic"></div>
-                <div>Greem Fullon</div>
-              </div>
-            </div>
-            <div class="blog-list-box-item-b-sub-item-a">
-              <div>The attention span of today’s mobile user is shrinking at a very rapid pace. In 2000, we could boast of having an attention span of 15 seconds, however, since 2015, it has dropped down to 8 seconds – making our attention span shorter than a goldfish!</div>
-            </div>
-            <div class="blog-list-box-item-b-sub-item-b"><a class="button-b w-button" href="#">Read more</a>
-            </div>
-          </div>
-        </div>
-        <div class="blog-list-block-b">
-          <a class="link-block w-inline-block" href="#"></a>
-          <div class="div-block-9"><a class="blog-list-box-item-b-sub-item-a w-inline-block" href="#"><h3>Why we love Behavioral Segmentation</h3></a>
-            <div class="blog-list-box-item-b-sub-item-a">
-              <div class="blog-author-box">
-                <div class="blog-author-pic"></div>
-                <div>Greem Fullon</div>
-              </div>
-            </div>
-            <div class="blog-list-box-item-b-sub-item-a">
-              <div>The attention span of today’s mobile user is shrinking at a very rapid pace. In 2000, we could boast of having an attention span of 15 seconds, however, since 2015, it has dropped down to 8 seconds – making our attention span shorter than a goldfish!</div>
-            </div>
-            <div class="blog-list-box-item-b-sub-item-b"><a class="button-b w-button" href="#">Read more</a>
-            </div>
-          </div>
-        </div>
-        <div class="blog-list-block-b">
-          <a class="link-block w-inline-block" href="#"></a>
-          <div class="div-block-9"><a class="blog-list-box-item-b-sub-item-a w-inline-block" href="#"><h3>Why we love Behavioral Segmentation</h3></a>
-            <div class="blog-list-box-item-b-sub-item-a">
-              <div class="blog-author-box">
-                <div class="blog-author-pic"></div>
-                <div>Greem Fullon</div>
-              </div>
-            </div>
-            <div class="blog-list-box-item-b-sub-item-a">
-              <div>The attention span of today’s mobile user is shrinking at a very rapid pace. In 2000, we could boast of having an attention span of 15 seconds, however, since 2015, it has dropped down to 8 seconds – making our attention span shorter than a goldfish!</div>
-            </div>
-            <div class="blog-list-box-item-b-sub-item-b"><a class="button-b w-button" href="#">Read more</a>
-            </div>
-          </div>
-        </div>
-        <div class="blog-list-block-b">
-          <a class="link-block w-inline-block" href="#"></a>
-          <div class="div-block-9"><a class="blog-list-box-item-b-sub-item-a w-inline-block" href="#"><h3>Why we love Behavioral Segmentation</h3></a>
-            <div class="blog-list-box-item-b-sub-item-a">
-              <div class="blog-author-box">
-                <div class="blog-author-pic"></div>
-                <div>Greem Fullon</div>
-              </div>
-            </div>
-            <div class="blog-list-box-item-b-sub-item-a">
-              <div>The attention span of today’s mobile user is shrinking at a very rapid pace. In 2000, we could boast of having an attention span of 15 seconds, however, since 2015, it has dropped down to 8 seconds – making our attention span shorter than a goldfish!</div>
-            </div>
-            <div class="blog-list-box-item-b-sub-item-b"><a class="button-b w-button" href="#">Read more</a>
-            </div>
-          </div>
-        </div>
+      
+      <?php } } ?>    
+      
       </div>
+
     </div>
   </div>
+    
+
+
+
   <div class="section-a">
     <div class="container w-container">
       <div class="blog-container-b">

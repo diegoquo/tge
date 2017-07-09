@@ -2,13 +2,13 @@
     <div class="container w-container">
       <div class="nav-bar-b-container">
         <div class="nav-bar-b-box-a">
-          <a class="nav-bar-b-logo-container w-inline-block" href="/"><img class="nav-bar-b-logo" src="images/13x.png">
+          <a class="nav-bar-b-logo-container w-inline-block" href="/"><img class="nav-bar-b-logo" src="/images/13x.png">
           </a>
           <div class="nav-bar-b-box-a-items-box">
             <div class="nav-bar-b-item-a"><a class="link-b" data-ix="trigger-nav-sub-bar-b" href="/pricing">Pricing</a>
             </div>
             <div class="nav-bar-b-item-b" data-ix="trigger-nav-sub-bar-a">
-              <div class="link-b">Features</div><img class="nav-bar-b-item-b-arrow-pic" src="images/13x_2.png">
+              <div class="link-b">Features</div><img class="nav-bar-b-item-b-arrow-pic" src="/images/13x_2.png">
               
               <div class="nav-bar-sub-menu-a">
                 
@@ -39,7 +39,7 @@
                     <div class="nav-bar-b-item-c-sub-item-b-sub-item-a">
                       <div class="nav-bar-b-link-a">All features</div>
                       <div>Get line of credit with absolutely 0% interest forever.</div>
-                    </div><img class="nav-bar-arrow-a" src="images/13x_1.png">
+                    </div><img class="nav-bar-arrow-a" src="/images/13x_1.png">
                   </a>
                 
                 </div>
@@ -47,7 +47,7 @@
             </div>
 
             <div class="nav-bar-b-item-b" data-ix="trigger-nav-sub-bar-a">
-              <div class="link-b">Learn</div><img class="nav-bar-b-item-b-arrow-pic" src="images/13x_2.png">
+              <div class="link-b">Learn</div><img class="nav-bar-b-item-b-arrow-pic" src="/images/13x_2.png">
               <div class="nav-bar-sub-menu-a">
                 <div class="nav-bar-b-item-b-box-a" data-ix="close-nav-bar-item-b">
                   
@@ -71,7 +71,7 @@
               </div>
             </div>
             <div class="nav-bar-b-item-b" data-ix="trigger-nav-sub-bar-a">
-              <div class="link-b">Documentation</div><img class="nav-bar-b-item-b-arrow-pic" src="images/13x_2.png">
+              <div class="link-b">Documentation</div><img class="nav-bar-b-item-b-arrow-pic" src="/images/13x_2.png">
               <div class="nav-bar-sub-menu-a">
                 <div class="nav-bar-b-item-b-box-a" data-ix="close-nav-bar-item-b">
                   
@@ -95,7 +95,7 @@
               </div>
             </div>
             <div class="nav-bar-b-item-b" data-ix="trigger-nav-sub-bar-a">
-              <div class="link-b">User guide</div><img class="nav-bar-b-item-b-arrow-pic" src="images/13x_2.png">
+              <div class="link-b">User guide</div><img class="nav-bar-b-item-b-arrow-pic" src="/images/13x_2.png">
               <div class="nav-bar-sub-menu-a">
                 <div class="nav-bar-b-item-b-box-a" data-ix="close-nav-bar-item-b">
                   
@@ -118,7 +118,7 @@
               </div>
             </div>
             <div class="nav-bar-b-item-b" data-ix="trigger-nav-sub-bar-a">
-              <div class="link-b">Help</div><img class="nav-bar-b-item-b-arrow-pic" src="images/13x_2.png">
+              <div class="link-b">Help</div><img class="nav-bar-b-item-b-arrow-pic" src="/images/13x_2.png">
               <div class="nav-bar-sub-menu-a">
                 <div class="nav-bar-b-item-b-box-a" data-ix="close-nav-bar-item-b">
                   
@@ -165,7 +165,7 @@
 
     <div class="menu-mobile">
       <div>
-        <a class="menu-mobile-logo w-inline-block" href="#"><img class="mobile-menu-logo-pic" src="images/13x.png">
+        <a class="menu-mobile-logo w-inline-block" href="#"><img class="mobile-menu-logo-pic" src="/images/13x.png">
         </a>
         <div class="mobile-menu-box-a">
           <div class="mobile-menu-item-a">
@@ -202,7 +202,7 @@
           </div>
         </div>
       </div>
-      <div class="mobile-close-button-box" data-ix="close-menu-mobile"><img class="mobile-menu-close-button" src="images/Group3x.png">
+      <div class="mobile-close-button-box" data-ix="close-menu-mobile"><img class="mobile-menu-close-button" src="/images/Group3x.png">
       </div>
     </div>
   </div>

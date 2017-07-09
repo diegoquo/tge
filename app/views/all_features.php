@@ -6,6 +6,7 @@ if (isset($WPGLOBAL['pageContent'])) {
 }
 
 $clients = $WPGLOBAL['clients'];
+$features = $WPGLOBAL['features'];
 $features_items = $WPGLOBAL['features_items'];
 $features_menu = $WPGLOBAL['features_menu'];
 $menu_learn = $WPGLOBAL['menu_learn'];
@@ -42,12 +43,18 @@ $title = "TODO";
       <div class="section-g-container-a">
         <div class="section-g-container-a-box-a">
           <div class="section-g-container-a-box-a-item-a">
-            <h1 data-ix="animate-on-load-b">Explore more capabilities!</h1>
+            <h1 data-ix="animate-on-load-b">
+              <?= $features->getText('features.title') ? $features->getText('features.title') : "Untitled" ?>
+            </h1>
           </div>
           <div class="section-g-container-a-box-a-item-a">
-            <div class="p-big" data-ix="animate-on-load-c">Tapgage helps you get to know your users, analyze your audience, and engage with them. All at the same time.</div>
+            <div class="p-big" data-ix="animate-on-load-c">
+              <?= $features->getText('features.subtitle') ? $features->getText('features.subtitle') : "Untitled" ?>
+            </div>
           </div>
-          <div class="section-g-container-a-box-a-item-a" data-ix="animate-on-load-d"><a class="button-c w-button" href="#">Let's get started</a>
+          <div class="section-g-container-a-box-a-item-a" data-ix="animate-on-load-d"><a class="button-c w-button" href="#">
+            <?= $features->getText('features.button_headline') ? $features->getText('features.button_headline') : "Untitled" ?>
+          </a>
           </div>
         </div>
         <div class="div-block-2">
@@ -58,28 +65,40 @@ $title = "TODO";
     </div>
   </div>
   <div class="section-h" data-ix="animate-on-scroll-a">
+    
     <div class="container w-container">
       <div class="container-p">
-        <div class="container-p-box-a" data-ix="animate-on-scroll-b"><img class="image-3" sizes="(max-width: 479px) 100vw, (max-width: 767px) 254.453125px, (max-width: 991px) 41vw, 42vw" src="images/Programmatic-analytics3x.png" srcset="images/Programmatic-analytics3x-p-500.png 500w, images/Programmatic-analytics3x-p-800.png 800w, images/Programmatic-analytics3x-p-1080.png 1080w, images/Programmatic-analytics3x-p-1600.png 1600w, images/Programmatic-analytics3x.png 1758w">
+        <div class="container-p-box-a" data-ix="animate-on-scroll-b">
+        <img class="image-3" 
+         src="<?= $features->getImage('features.feature_1_pic')->getUrl() ?>" >
         </div>
         <div class="container-p-box-b">
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-c">
             <div class="div-block-21">
-              <h2>Analytics</h2>
+              <h2>
+               <?= $features->getText('features.feature_1_headline') ? $features->getText('features.feature_1_headline') : "Untitled" ?>
+              </h2>
             </div>
-            <div>Powerful analysis that will bring your app data to life</div>
+            <div><?= $features->getText('features.feature_1_headline') ? $features->getText('features.feature_1_headline') : "Untitled" ?></div>
             <div class="div-block-23"></div>
           </div>
           <div class="container-p-box-b-item-a">
             <div class="container-p-box-b-item-a-subitem-a" data-ix="animate-on-scroll-d">
+              
               <div class="container-p-box-b-item-a-subitem-b">
+                <?php foreach($features->getGroup('features.feature_2_item')->getArray() as $item) { ?>
                 <div class="div-block-22">
-                  <div class="icon-box-a"><img class="icon-pic-a" src="images/13x_7.png">
+                  <div class="icon-box-a">
+                    <img class="icon-pic-a" src="<?= $item->getImage('icon')->getUrl() ?>">
                   </div>
                 </div>
-                <div>Analyze your users by different attributes like Active Vs Inactive, Old Vs New, Sessions, OS Version segmentation and more. Dig deeper into the stats.</div>
+                <div>
+                  <?= $item->getText('description') ? $item->getText('description') : "Untitled" ?>
+                </div>
               </div>
+              <?php } ?>
             </div>
+
           </div>
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-e"><a class="button-c w-button" href="programmatic-analytics.html">Learn more</a>
           </div>
@@ -88,19 +107,25 @@ $title = "TODO";
         <div class="abstract-b"></div>
         <div class="abstract-c"></div>
       </div>
+
       <div class="container-p container-p-reverse">
         <div class="container-p-box-a" data-ix="animate-on-scroll-a"><img class="image-3" sizes="(max-width: 479px) 100vw, (max-width: 767px) 269.21875px, (max-width: 991px) 41vw, 42vw" src="images/User-profiles3x.png" srcset="images/User-profiles3x-p-500.png 500w, images/User-profiles3x-p-800.png 800w, images/User-profiles3x-p-1080.png 1080w, images/User-profiles3x-p-1600.png 1600w, images/User-profiles3x.png 1860w">
         </div>
         <div class="container-p-box-b">
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-b">
             <div class="div-block-21">
-              <h2>User Profiles</h2>
+              <h2>
+                <?= $features->getText('features.feature_2_headline') ? $features->getText('features.feature_2_headline') : "Untitled" ?>
+              </h2>
             </div>
-            <div>Powerful analysis that will bring your app data to life</div>
+            <div>
+              <?= $features->getText('features.feature_2_description') ? $features->getText('features.feature_2_description') : "Untitled" ?>
+            </div>
             <div class="div-block-23"></div>
           </div>
           <div class="container-p-box-b-item-a">
             <div class="container-p-box-b-item-a-subitem-a" data-ix="animate-on-scroll-c">
+              <?php foreach($features->getGroup('features.feature_2_item')->getArray() as $item) { ?>
               <div class="container-p-box-b-item-a-subitem-b">
                 <div class="div-block-22">
                   <div class="icon-box-a"><img class="icon-pic-a" src="images/-13x_2.png">
@@ -116,6 +141,7 @@ $title = "TODO";
                 <div>Look through Individual user profile and see in detail their activity and attributes to make personalized campaigns.</div>
               </div>
             </div>
+            <?php } ?>
           </div>
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-d"><a class="button-c w-button" href="user-profiles.html">Learn more</a>
           </div>
@@ -125,7 +151,8 @@ $title = "TODO";
         <div class="abstract-a"></div>
       </div>
       <div class="container-p">
-        <div class="container-p-box-a" data-ix="animate-on-scroll-a"><img class="image-3" sizes="(max-width: 479px) 100vw, (max-width: 767px) 237.953125px, 41vw" src="images/-33x_3.png" srcset="images/-33x_3-p-500.png 500w, images/-33x_3-p-800.png 800w, images/-33x_3-p-1080.png 1080w, images/-33x_3-p-1600.png 1600w, images/-33x_3.png 1644w">
+        <div class="container-p-box-a" data-ix="animate-on-scroll-a">
+        <img class="image-3" sizes="(max-width: 479px) 100vw, (max-width: 767px) 237.953125px, 41vw" src="images/-33x_3.png" srcset="images/-33x_3-p-500.png 500w, images/-33x_3-p-800.png 800w, images/-33x_3-p-1080.png 1080w, images/-33x_3-p-1600.png 1600w, images/-33x_3.png 1644w">
         </div>
         <div class="container-p-box-b">
           <div class="container-p-box-b-item-a" data-ix="animate-on-scroll-b">

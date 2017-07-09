@@ -100,7 +100,7 @@ li {
 
 .link-a {
   padding-right: 35px;
-  background-image: url('../images/Arrow-3x.png');
+  background-image: url('/images/Arrow-3x.png');
   background-position: 100% 50%;
   background-size: 26px;
   background-repeat: no-repeat;
@@ -226,7 +226,7 @@ li {
   overflow: hidden;
   margin-top: 60px;
   padding: 210px 40px 150px;
-  background-image: url('../images/bg-home-page-73x.jpg');
+  background-image: url('/images/bg-home-page-73x.jpg');
   background-position: 50% 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -372,7 +372,7 @@ li {
   padding-right: 40px;
   padding-bottom: 90px;
   padding-left: 40px;
-  background-image: url('../images/bg-33x.jpg');
+  background-image: url('/images/bg-33x.jpg');
   background-position: 50% 40px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -453,7 +453,7 @@ li {
 
 .section-c {
   padding: 90px 40px;
-  background-image: url('../images/bg-5.png'), url('../images/bg-4.png');
+  background-image: url('/images/bg-5.png'), url('/images/bg-4.png');
   background-position: 0px 75%, 100% 100%;
   background-size: auto 450px, auto 450px;
   background-repeat: no-repeat, no-repeat;
@@ -1014,7 +1014,7 @@ li {
 
 .container-k-item-a-sub-a {
   height: 200px;
-  background-image: url('../images/Rectangle-33x.png');
+  background-image: url('/images/Rectangle-33x.png');
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -1134,7 +1134,7 @@ li {
 }
 
 .form-text-field-a.form-text-field-a-variation-a {
-  background-image: url('../images/Lock3x.png');
+  background-image: url('/images/Lock3x.png');
   background-position: 98% 50%;
   background-size: 15px;
   background-repeat: no-repeat;
@@ -1175,7 +1175,7 @@ li {
   padding-top: 180px;
   padding-right: 40px;
   padding-left: 40px;
-  background-image: url('../images/Fill-13x.jpg');
+  background-image: url('/images/Fill-13x.jpg');
   background-position: 0px 88px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1321,7 +1321,7 @@ li {
   margin-top: 60px;
   margin-bottom: 200px;
   padding: 180px 40px 90px;
-  background-image: url('../images/13x.jpg');
+  background-image: url('/images/13x.jpg');
   background-position: 50% 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1369,7 +1369,7 @@ li {
   bottom: 0px;
   width: 50px;
   height: 50px;
-  background-image: url('../images/abstract-pattern-hexagon-23x.png');
+  background-image: url('/images/abstract-pattern-hexagon-23x.png');
   background-position: 50% 50%;
   background-size: 58px;
   background-repeat: no-repeat;
@@ -1381,7 +1381,7 @@ li {
   top: 82px;
   width: 200px;
   height: 200px;
-  background-image: url('../images/53x_1.png');
+  background-image: url('/images/53x_1.png');
   background-position: 50% 50%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1393,7 +1393,7 @@ li {
   bottom: -51px;
   width: 40px;
   height: 40px;
-  background-image: url('../images/abstract-pattern-hexagon-23x.png');
+  background-image: url('/images/abstract-pattern-hexagon-23x.png');
   background-position: 0px 0px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1545,7 +1545,7 @@ li {
   -webkit-flex-basis: 60%;
   -ms-flex-preferred-size: 60%;
   flex-basis: 60%;
-  background-image: url('../images/Rectangle3x.jpg');
+  background-image: url('/images/Rectangle3x.jpg');
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -1590,7 +1590,7 @@ li {
   height: 20px;
   margin-right: 10px;
   border-radius: 20px;
-  background-image: url('../images/Oval3x.jpg');
+  background-image: url('/images/Oval3x.jpg');
   background-position: 0px 0px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1630,7 +1630,7 @@ li {
 
 .link-block {
   height: 240px;
-  background-image: url('../images/Rectangle3x.jpg');
+  background-image: url('/images/Rectangle3x.jpg');
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -1956,7 +1956,7 @@ li {
   height: 40px;
   border-radius: 50px;
   background-color: #f1f1f1;
-  background-image: url('../images/Group3x.png');
+  background-image: url('/images/Group3x.png');
   background-position: 50% 50%;
   background-size: 12px;
   background-repeat: no-repeat;
@@ -3556,7 +3556,7 @@ html.w-mod-js *[data-ix="tabs-1"] {
     height: auto;
   }
   .abstract-a {
-    background-image: url('../images/abstract-pattern-hexagon-23x.png');
+    background-image: url('/images/abstract-pattern-hexagon-23x.png');
     background-size: 58px;
   }
   .press-section-a {

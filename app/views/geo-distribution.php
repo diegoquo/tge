@@ -15,6 +15,8 @@ $menu_user_guide = $WPGLOBAL['menu_user_guide'];
 $menu_help = $WPGLOBAL['menu_help'];
 $general_content = $WPGLOBAL['general_content'];
 $home = $WPGLOBAL['home'];
+$geodist = $WPGLOBAL['geodist'];
+
 
 $cont = 0;
 
@@ -43,10 +45,14 @@ $title = "TODO";
     <div class="container w-container">
       <div class="section-hero-c-container-a" data-ix="animate-on-load-b">
         <div class="section-hero-c-container-a-item-a">
-          <h1>Geo-distribution</h1>
+          <h1>
+          <?= $geodist->getText('geo-distribution.title') ? $geodist->getText('geo-distribution.title') : "Untitled" ?>
+          </h1>
         </div>
         <div class="section-hero-c-container-a-item-a">
-          <div class="p-big">Know detailed location information of your users. Know the up or down trend of those locations.</div>
+          <div class="p-big">
+            <?= $geodist->getText('geo-distribution.subtitle') ? $geodist->getText('geo-distribution.subtitle') : "Untitled" ?>
+          </div>
         </div>
       </div>
       <div class="div-block-6">
@@ -55,6 +61,7 @@ $title = "TODO";
       </div>
     </div>
   </div>
+  
   <div class="section-h">
     <div class="container w-container">
       <div class="container-p">
