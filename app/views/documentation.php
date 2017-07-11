@@ -47,17 +47,17 @@ $title = "TODO";
             <div class="p-big w-hidden-tiny">Documentation</div>
             <h1 class="w-hidden-main w-hidden-medium w-hidden-small">Documentation</h1>
           </div>
-          <div class="div-block-10"><a class="link" href="/documentation/1">Dev Docs iOS</a>
+          <div class="div-block-10"><a class="link" href="/documentations/1">Dev Docs iOS</a>
           </div>
-          <div class="div-block-10"><a class="link" href="/documentation/2">Dev Docs Android</a>
+          <div class="div-block-10"><a class="link" href="/documentations/2">Dev Docs Android</a>
           </div>
-          <div class="div-block-10"><a class="link" href="/documentation/3">Dev Docs SDK</a>
+          <div class="div-block-10"><a class="link" href="/documentations/3">Dev Docs SDK</a>
           </div>
-          <div class="div-block-10"><a class="link" href="/documentation/4">Dev Docs Profile API</a>
+          <div class="div-block-10"><a class="link" href="/documentations/4">Dev Docs Profile API</a>
           </div>
-          <div class="div-block-10"><a class="link" href="/documentation/5">Dev Docs Push API</a>
+          <div class="div-block-10"><a class="link" href="/documentations/5">Dev Docs Push API</a>
           </div>
-          <div class="div-block-10"><a class="link" href="/documentation/6">Dev Docs iOS</a>
+          <div class="div-block-10"><a class="link" href="/documentations/6">Dev Docs iOS</a>
           </div>
         </div>
         <div class="section-j-container-a-box-c">
