@@ -1233,7 +1233,7 @@ $app->get('/pricing', function ($request, $response) use ($app, $prismic) {
 });
 
 // Index page
-$app->get('/documentation/{uid}', function ($request, $response, $args) use ($app, $prismic) {
+$app->get('/documentations/{uid}', function ($request, $response, $args) use ($app, $prismic) {
 
   // Query the API for the homepage content and all the posts
   $api = $prismic->get_api();
