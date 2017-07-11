@@ -1233,10 +1233,14 @@ $app->get('/pricing', function ($request, $response) use ($app, $prismic) {
 });
 
 // Index page
-$app->get('/documentation', function ($request, $response) use ($app, $prismic) {
+$app->get('/documentation/{uid}', function ($request, $response, $args) use ($app, $prismic) {
 
   // Query the API for the homepage content and all the posts
   $api = $prismic->get_api();
+
+  $uid = $args['uid'];
+
+  $documentations = $api->getByUID('documentations', $uid);
 
   $generalContent = $api->getSingle('general_content');
   
@@ -1278,6 +1282,7 @@ $app->get('/documentation', function ($request, $response) use ($app, $prismic) 
     $app, 'documentation', 
     array(
       'general_content' => $generalContent,
+      'documentations' => $documentations,
       'clients' => $clients->getResults(),
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
@@ -1290,10 +1295,14 @@ $app->get('/documentation', function ($request, $response) use ($app, $prismic) 
 
 });
 
-$app->get('/user-guide', function ($request, $response) use ($app, $prismic) {
+$app->get('/user-guide/{uid}', function ($request, $response, $args) use ($app, $prismic) {
 
   // Query the API for the homepage content and all the posts
   $api = $prismic->get_api();
+
+  $uid = $args['uid'];
+
+  $user_guide = $api->getByUID('user_guide', $uid);
 
   $generalContent = $api->getSingle('general_content');
   
@@ -1335,6 +1344,7 @@ $app->get('/user-guide', function ($request, $response) use ($app, $prismic) {
     $app, 'user-guide', 
     array(
       'general_content' => $generalContent,
+      'user_guide' => $user_guide,
       'clients' => $clients->getResults(),
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),

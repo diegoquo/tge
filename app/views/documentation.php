@@ -13,6 +13,7 @@ $menu_doc = $WPGLOBAL['menu_doc'];
 $menu_user_guide = $WPGLOBAL['menu_user_guide'];
 $menu_help = $WPGLOBAL['menu_help'];
 $general_content = $WPGLOBAL['general_content'];
+$documentations = $WPGLOBAL['documentations'];
 
 $cont = 0;
 
@@ -46,34 +47,30 @@ $title = "TODO";
             <div class="p-big w-hidden-tiny">Documentation</div>
             <h1 class="w-hidden-main w-hidden-medium w-hidden-small">Documentation</h1>
           </div>
-          <div class="div-block-10"><a class="link" href="#">Dev Docs iOS</a>
+          <div class="div-block-10"><a class="link" href="/documentation/1">Dev Docs iOS</a>
           </div>
-          <div class="div-block-10"><a class="link" href="#">Dev Docs Android</a>
+          <div class="div-block-10"><a class="link" href="/documentation/2">Dev Docs Android</a>
           </div>
-          <div class="div-block-10"><a class="link" href="#">Dev Docs SDK</a>
+          <div class="div-block-10"><a class="link" href="/documentation/3">Dev Docs SDK</a>
           </div>
-          <div class="div-block-10"><a class="link" href="#">Dev Docs Profile API</a>
+          <div class="div-block-10"><a class="link" href="/documentation/4">Dev Docs Profile API</a>
           </div>
-          <div class="div-block-10"><a class="link" href="documentation.html">Dev Docs Push API</a>
+          <div class="div-block-10"><a class="link" href="/documentation/5">Dev Docs Push API</a>
           </div>
-          <div class="div-block-10"><a class="link" href="#">Dev Docs iOS</a>
+          <div class="div-block-10"><a class="link" href="/documentation/6">Dev Docs iOS</a>
           </div>
         </div>
         <div class="section-j-container-a-box-c">
           <div class="section-k-container-a-box-a-item-a">
-            <h2>Dev Docs Push API</h2>
+            <h2>
+              <?= $documentations->getText('documentations.title') ? $documentations->getText('documentations.title') : "Untitled" ?>
+            </h2>
           </div>
           <div class="w-richtext">
-            <p>CleverTap provides HTTP API endpoints to your data. Endpoints for working with Events, User Profiles, Dashboard Counts and Push Notifications are currently supported.</p>
-            <p>Above listed API endpoints support complex filters using CleverTap Query Language. For in-depth documentation see Understanding CleverTap Query Language.</p>
-            <figure class="w-richtext-figure-type-image w-richtext-align-fullwidth">
-              <div><img src="images/Illustration3x.png">
-              </div>
-            </figure>
-            <h2>Importing Historical Data</h2>
-            <p>Using CleverTap’s Server APIs you can import important historical data that you have collected in your own internal systems or from other analytical/engagement tools you might have been using previously.Using CleverTap’s Server APIs you can import important historical data that you have collected in your own internal systems or from other analytical/engagement tools you might have been using previously.Using CleverTap’s Server APIs you can import important historical data that you have collected in your own internal systems or from other analytical/engagement tools you might have been using previously.Using CleverTap’s Server APIs you can import important historical data that you have collected in your own internal systems or from other analytical/engagement tools you might have been using previously.Using CleverTap’s Server APIs you can import important historical data that you have collected in your own internal systems or from other analytical/engagement tools you might have been using previously.</p>
-            <p>It’s a 2 step process to import historical data into CleverTap:</p>
-            <p>Using CleverTap’s Server APIs you can import important historical data that you have collected in your own internal systems or from other analytical/engagement tools you might have been using previously.</p>
+
+           <br>
+          
+           <?= $documentations->getStructuredText("documentations.content")->asHtml($resolver); ?>  
           </div>
         </div>
         <div class="section-j-container-a-box-b">
