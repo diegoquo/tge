@@ -6,6 +6,7 @@ if (isset($WPGLOBAL['pageContent'])) {
 }
 
 $clients = $WPGLOBAL['clients'];
+$social_link = $WPGLOBAL['social_link'];
 $features_items = $WPGLOBAL['features_items'];
 $features_menu = $WPGLOBAL['features_menu'];
 $general_content = $WPGLOBAL['general_content'];

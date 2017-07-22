@@ -6,6 +6,8 @@ if (isset($WPGLOBAL['pageContent'])) {
 }
 
 $clients = $WPGLOBAL['clients'];
+$press_item = $WPGLOBAL['press_item'];
+$social_link = $WPGLOBAL['social_link'];
 $features_items = $WPGLOBAL['features_items'];
 $features_menu = $WPGLOBAL['features_menu'];
 $menu_learn = $WPGLOBAL['menu_learn'];
@@ -42,47 +44,46 @@ $title = "TODO";
       <div class="press-container-a">
         <h1 class="heading">Press</h1>
       </div>
-      <div class="press-container-b">
-        <div class="press-container-b-box-a"><a class="press-item-a w-inline-block" href="#"><h3>Welcome Sylvie Veilleux, Chief Information Officer</h3></a>
-          <div class="p-big">Sylvie will lead teams responsible for the technologies we use to run our growing global business.</div>
-        </div>
-        <div class="press-container-b-box-b">
-          <div>May 19, 2017</div>
-        </div>
-      </div>
-      <div class="press-container-b">
-        <div class="press-container-b-box-a"><a class="press-item-a w-inline-block" href="#"><h3>Welcome Sylvie Veilleux, Chief Information Officer</h3></a>
-          <div class="p-big">Sylvie will lead teams responsible for the technologies we use to run our growing global business.</div>
-        </div>
-        <div class="press-container-b-box-b">
-          <div>May 19, 2017</div>
-        </div>
-      </div>
-      <div class="press-container-b">
-        <div class="press-container-b-box-a"><a class="press-item-a w-inline-block" href="#"><h3>Welcome Sylvie Veilleux, Chief Information Officer</h3></a>
-          <div class="p-big">Sylvie will lead teams responsible for the technologies we use to run our growing global business.</div>
-        </div>
-        <div class="press-container-b-box-b">
-          <div>May 19, 2017</div>
-        </div>
-      </div>
-      <div class="press-container-b">
-        <div class="press-container-b-box-a"><a class="press-item-a w-inline-block" href="#"><h3>Welcome Sylvie Veilleux, Chief Information Officer</h3></a>
-          <div class="p-big">Sylvie will lead teams responsible for the technologies we use to run our growing global business.</div>
-        </div>
-        <div class="press-container-b-box-b">
-          <div>May 19, 2017</div>
-        </div>
-      </div>
-      <div class="press-container-b">
-        <div class="press-container-b-box-a"><a class="press-item-a w-inline-block" href="#"><h3>Welcome Sylvie Veilleux, Chief Information Officer</h3></a>
-          <div class="p-big">Sylvie will lead teams responsible for the technologies we use to run our growing global business.</div>
-        </div>
-        <div class="press-container-b-box-b">
-          <div>May 19, 2017</div>
-        </div>
-      </div>
-      <div class="press-container-c"><a class="press-link-a" href="#">Load more</a>
+
+      
+      <?php foreach ($press_item as $p) { ?>
+
+          <div class="press-container-b">
+            <div class="press-container-b-box-a">
+            <a class="press-item-a w-inline-block" href="/press/<?= $p->getUid() ?>">
+            <h3>
+            <?= $p->getText('press.title') ? $p->getText('press.title') : "Untitled" ?>
+            </h3>
+            </a>
+              <div class="p-big"><?= $p->getText('press.resume') ? $p->getText('press.resume') : "Untitled" ?></div>
+            </div>
+            <div class="press-container-b-box-b">
+              <div><?= $p->getDate('press.date')->asText() ?></div>
+            </div>
+          </div>
+
+          <!--
+          <div class="press-container-b">
+
+              <a class="press-item-a w-inline-block" href="#">
+                 <h3>
+                 <?= $p->getText('press_item.title') ? $p->getText('press_item.title') : "Untitled" ?>  
+                 </h3>
+              </a>
+              <div class="p-big">
+              <?= $p->getText('press_item.resume') ? $p->getText('press_item.resume') : "Untitled" ?> 
+              </div>
+              <div class="press-container-b-box-b">
+                <div>
+                <?= $p->getText('press_item.date') ? $p->getText('press_item.date') : "Untitled" ?> 
+                </div>
+              </div>
+          </div> 
+          --> 
+      <?php } ?>
+     
+      <div class="press-container-c">
+         <a class="press-link-a" href="#">Load more</a>
       </div>
     </div>
   </div>

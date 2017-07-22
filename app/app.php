@@ -41,8 +41,12 @@ $app->get('/', function ($request, $response) use ($app, $prismic) {
   $generalContent = $api->getSingle('general_content');
   $home = $api->getSingle('home');
   
-  
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
 
   //1 11 2 6 7 8 9 10 5 4  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
@@ -82,6 +86,7 @@ $app->get('/', function ($request, $response) use ($app, $prismic) {
       'home' => $home,
       'general_content' => $generalContent,
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
       'menu_learn' => $menu_learn->getResults(),
@@ -104,6 +109,11 @@ $app->get('/geo-distribution', function ($request, $response) use ($app, $prismi
   $geodist = $api->getSingle('geo-distribution');
 
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
   $features_menu = $api->query(
@@ -150,6 +160,8 @@ $app->get('/geo-distribution', function ($request, $response) use ($app, $prismi
     $app, 'geo-distribution', 
     array(
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
+      'features_items' => $features_items->getResults(),
       'general_content' => $generalContent,
       'geodist' => $geodist,
       'features_items' => $features_items->getResults(),
@@ -172,6 +184,11 @@ $app->get('/analytics', function ($request, $response) use ($app, $prismic) {
   $generalContent = $api->getSingle('general_content');
 
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
   $features_menu = $api->query(
@@ -223,6 +240,7 @@ $app->get('/analytics', function ($request, $response) use ($app, $prismic) {
     $app, 'analytics', 
     array(
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'general_content' => $generalContent,
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
@@ -246,6 +264,11 @@ $app->get('/events', function ($request, $response) use ($app, $prismic) {
   $generalContent = $api->getSingle('general_content');
 
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
   $features_menu = $api->query(
@@ -297,6 +320,7 @@ $app->get('/events', function ($request, $response) use ($app, $prismic) {
     $app, 'events', 
     array(
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'general_content' => $generalContent,
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
@@ -318,6 +342,11 @@ $app->get('/users_profiles', function ($request, $response) use ($app, $prismic)
   $generalContent = $api->getSingle('general_content');
 
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
   $features_menu = $api->query(
@@ -369,6 +398,7 @@ $app->get('/users_profiles', function ($request, $response) use ($app, $prismic)
     $app, 'users_profiles', 
     array(
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'general_content' => $generalContent,
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
@@ -391,6 +421,11 @@ $app->get('/campaigns', function ($request, $response) use ($app, $prismic) {
   $campaigns = $api->getSingle('campaigns');
 
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
   $features_menu = $api->query(
@@ -443,6 +478,7 @@ $app->get('/campaigns', function ($request, $response) use ($app, $prismic) {
     array(
       'campaigns' => $campaigns,
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'general_content' => $generalContent,
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
@@ -464,6 +500,11 @@ $app->get('/in-app-notifications', function ($request, $response) use ($app, $pr
   $generalContent = $api->getSingle('general_content');
 
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
   $features_menu = $api->query(
@@ -515,6 +556,7 @@ $app->get('/in-app-notifications', function ($request, $response) use ($app, $pr
     $app, 'in-app-notifications', 
     array(
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'general_content' => $generalContent,
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
@@ -537,6 +579,11 @@ $app->get('/push-notifications', function ($request, $response) use ($app, $pris
   $generalContent = $api->getSingle('general_content');
 
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
   $features_menu = $api->query(
@@ -588,6 +635,7 @@ $app->get('/push-notifications', function ($request, $response) use ($app, $pris
     $app, 'push-notifications', 
     array(
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'general_content' => $generalContent,
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
@@ -609,6 +657,11 @@ $app->get('/sms', function ($request, $response) use ($app, $prismic) {
   $generalContent = $api->getSingle('general_content');
 
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
   $features_menu = $api->query(
@@ -661,6 +714,7 @@ $app->get('/sms', function ($request, $response) use ($app, $prismic) {
     $app, 'sms', 
     array(
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'general_content' => $generalContent,
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
@@ -685,6 +739,11 @@ $app->get('/email-marketing', function ($request, $response) use ($app, $prismic
   $email_marketing = $api->getSingle('email_marketing');
 
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
   $features_menu = $api->query(
@@ -737,6 +796,86 @@ $app->get('/email-marketing', function ($request, $response) use ($app, $prismic
     array(
       'email_marketing' => $email_marketing,
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
+      'general_content' => $generalContent,
+      'features_items' => $features_items->getResults(),
+      'features_menu' => $features_menu->getResults(),
+      'menu_learn' => $menu_learn->getResults(),
+      'menu_doc' => $menu_doc->getResults(),
+      'menu_user_guide' => $menu_user_guide->getResults(),
+      'menu_help' => $menu_help->getResults()
+    ) 
+  );
+
+});
+
+
+// push-notifications page
+$app->get('/funnels-and-segments', function ($request, $response) use ($app, $prismic) {
+
+  // Query the API for the homepage content and all the posts
+  $api = $prismic->get_api();
+
+  $generalContent = $api->getSingle('general_content');
+
+  $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
+ 
+  $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
+  $features_menu = $api->query(
+      Predicates::in('my.features_item.uid', $ids)
+  );
+  
+  $features_items = $api->query(
+    Predicates::at('document.type', 'features_item'),
+    [ 'orderings' => '[my.features_item.uid]' ]
+  );
+
+  $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
+  $features_menu = $api->query(
+      Predicates::in('my.features_item.uid', $ids)
+  );
+
+  $menu_learn = $api->query(
+    Predicates::at('document.type', 'menu_learn'),
+    [ 'orderings' => '[my.menu_learn.uid]' ]
+  );
+
+  $menu_doc = $api->query(
+    Predicates::at('document.type', 'menu_doc'),
+    [ 'orderings' => '[my.menu_doc.uid]' ]
+  );
+
+  $menu_user_guide = $api->query(
+    Predicates::at('document.type', 'menu_user_guide'),
+    [ 'orderings' => '[my.menu_user_guide.uid]' ]
+  );
+
+  $menu_help = $api->query(
+    Predicates::at('document.type', 'menu_help'),
+    [ 'orderings' => '[my.menu_help.uid]' ]
+  );
+  
+
+  $features_items = $api->query(
+    Predicates::at('document.type', 'features_item'),
+    [ 'orderings' => '[my.features_item.uid]' ]
+  );
+
+  $features_items = $api->query(
+    Predicates::at('document.type', 'features_item'),
+    [ 'orderings' => '[my.features_item.uid]' ]
+  );
+  
+  render(
+    $app, 'funnels-and-segments', 
+    array(
+      'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'general_content' => $generalContent,
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
@@ -759,6 +898,11 @@ $app->get('/all_features', function ($request, $response) use ($app, $prismic) {
   $features = $api->getSingle('features');
   
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
 
   //1 11 2 6 7 8 9 10 5 4  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
@@ -798,6 +942,7 @@ $app->get('/all_features', function ($request, $response) use ($app, $prismic) {
       'features' => $features,
       'general_content' => $generalContent,
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
       'menu_learn' => $menu_learn->getResults(),
@@ -819,6 +964,11 @@ $app->get('/company', function ($request, $response) use ($app, $prismic) {
   $generalContent = $api->getSingle('general_content');
   
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
 
   //1 11 2 6 7 8 9 10 5 4  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
@@ -857,6 +1007,7 @@ $app->get('/company', function ($request, $response) use ($app, $prismic) {
     array(
       'general_content' => $generalContent,
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
       'menu_learn' => $menu_learn->getResults(),
@@ -877,6 +1028,11 @@ $app->get('/blog-list', function ($request, $response) use ($app, $prismic) {
   $generalContent = $api->getSingle('general_content');
   
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
 
   $blog_item = $api->query(
     Predicates::at('document.type', 'blog_item'),
@@ -920,6 +1076,7 @@ $app->get('/blog-list', function ($request, $response) use ($app, $prismic) {
     array(
       'general_content' => $generalContent,
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'blog_item' => $blog_item->getResults(),
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
@@ -945,6 +1102,11 @@ $app->get('/blog_post/{uid}', function ($request, $response, $args) use ($app, $
   $generalContent = $api->getSingle('general_content');
   
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
 
   //1 11 2 6 7 8 9 10 5 4  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
@@ -984,6 +1146,7 @@ $app->get('/blog_post/{uid}', function ($request, $response, $args) use ($app, $
       'general_content' => $generalContent,
       'post' => $post,
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
       'menu_learn' => $menu_learn->getResults(),
@@ -997,14 +1160,93 @@ $app->get('/blog_post/{uid}', function ($request, $response, $args) use ($app, $
 
 
 // Index page
+$app->get('/press/{uid}', function ($request, $response, $args) use ($app, $prismic) {
+
+  // Query the API for the homepage content and all the posts
+  $api = $prismic->get_api();
+
+  $uid = $args['uid'];
+
+  $press = $api->getByUID('press', $uid);
+
+  $generalContent = $api->getSingle('general_content');
+  
+  $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
+
+  //1 11 2 6 7 8 9 10 5 4  
+  $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
+  $features_menu = $api->query(
+      Predicates::in('my.features_item.uid', $ids)
+  );
+
+  $menu_learn = $api->query(
+    Predicates::at('document.type', 'menu_learn'),
+    [ 'orderings' => '[my.menu_learn.uid]' ]
+  );
+
+  $menu_doc = $api->query(
+    Predicates::at('document.type', 'menu_doc'),
+    [ 'orderings' => '[my.menu_doc.uid]' ]
+  );
+
+  $menu_user_guide = $api->query(
+    Predicates::at('document.type', 'menu_user_guide'),
+    [ 'orderings' => '[my.menu_user_guide.uid]' ]
+  );
+
+  $menu_help = $api->query(
+    Predicates::at('document.type', 'menu_help'),
+    [ 'orderings' => '[my.menu_help.uid]' ]
+  );
+  
+
+  $features_items = $api->query(
+    Predicates::at('document.type', 'features_item'),
+    [ 'orderings' => '[my.features_item.uid]' ]
+  );
+  
+  render(
+    $app, 'press', 
+    array(
+      'press' => $press,
+      'general_content' => $generalContent,
+      'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
+      'features_items' => $features_items->getResults(),
+      'features_menu' => $features_menu->getResults(),
+      'menu_learn' => $menu_learn->getResults(),
+      'menu_doc' => $menu_doc->getResults(),
+      'menu_user_guide' => $menu_user_guide->getResults(),
+      'menu_help' => $menu_help->getResults(),
+    ) 
+  );
+
+});
+
+// Index page
 $app->get('/press-list', function ($request, $response) use ($app, $prismic) {
 
   // Query the API for the homepage content and all the posts
   $api = $prismic->get_api();
 
+  $press_item = $api->query(
+    Predicates::at('document.type', 'press'),
+    [ 'orderings' => '[my.press.date desc]' ]
+  );
+
   $generalContent = $api->getSingle('general_content');
   
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
 
   //1 11 2 6 7 8 9 10 5 4  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
@@ -1041,8 +1283,10 @@ $app->get('/press-list', function ($request, $response) use ($app, $prismic) {
   render(
     $app, 'press-list', 
     array(
+      'press_item' => $press_item->getResults(),
       'general_content' => $generalContent,
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
       'menu_learn' => $menu_learn->getResults(),
@@ -1066,6 +1310,11 @@ $app->get('/terms-of-service', function ($request, $response) use ($app, $prismi
   $termsOfService = $api->getSingle('terms_of_service');
   
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
 
   //1 11 2 6 7 8 9 10 5 4  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
@@ -1105,6 +1354,7 @@ $app->get('/terms-of-service', function ($request, $response) use ($app, $prismi
       'general_content' => $generalContent,
       'terms_of_service' => $termsOfService,
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
       'menu_learn' => $menu_learn->getResults(),
@@ -1122,9 +1372,16 @@ $app->get('/contact', function ($request, $response) use ($app, $prismic) {
   // Query the API for the homepage content and all the posts
   $api = $prismic->get_api();
 
+  $contac = $api->getSingle('contac');
+
   $generalContent = $api->getSingle('general_content');
   
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
 
   //1 11 2 6 7 8 9 10 5 4  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
@@ -1161,8 +1418,10 @@ $app->get('/contact', function ($request, $response) use ($app, $prismic) {
   render(
     $app, 'contact', 
     array(
+      'contac' => $contac,
       'general_content' => $generalContent,
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
       'menu_learn' => $menu_learn->getResults(),
@@ -1183,6 +1442,11 @@ $app->get('/pricing', function ($request, $response) use ($app, $prismic) {
   $generalContent = $api->getSingle('general_content');
   
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
 
   //1 11 2 6 7 8 9 10 5 4  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
@@ -1221,6 +1485,7 @@ $app->get('/pricing', function ($request, $response) use ($app, $prismic) {
     array(
       'general_content' => $generalContent,
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
       'menu_learn' => $menu_learn->getResults(),
@@ -1245,6 +1510,11 @@ $app->get('/documentations/{uid}', function ($request, $response, $args) use ($a
   $generalContent = $api->getSingle('general_content');
   
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
 
   //1 11 2 6 7 8 9 10 5 4  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
@@ -1284,6 +1554,7 @@ $app->get('/documentations/{uid}', function ($request, $response, $args) use ($a
       'general_content' => $generalContent,
       'documentations' => $documentations,
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
       'menu_learn' => $menu_learn->getResults(),
@@ -1307,6 +1578,11 @@ $app->get('/user-guide/{uid}', function ($request, $response, $args) use ($app, 
   $generalContent = $api->getSingle('general_content');
   
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
 
   //1 11 2 6 7 8 9 10 5 4  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
@@ -1346,6 +1622,7 @@ $app->get('/user-guide/{uid}', function ($request, $response, $args) use ($app, 
       'general_content' => $generalContent,
       'user_guide' => $user_guide,
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
       'menu_learn' => $menu_learn->getResults(),
@@ -1367,6 +1644,11 @@ $app->get('/privacy-policy', function ($request, $response) use ($app, $prismic)
   $privacyPolice = $api->getSingle('privacy_police');
   
   $clients = $api->query(Predicates::at("document.type", "c"));
+
+  $social_link = $api->query(
+    Predicates::at('document.type', 'social_link'),
+    [ 'orderings' => '[my.social_link.uid]' ]
+  );
 
   //1 11 2 6 7 8 9 10 5 4  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
@@ -1406,6 +1688,7 @@ $app->get('/privacy-policy', function ($request, $response) use ($app, $prismic)
       'privacy_police' => $privacyPolice,
       'general_content' => $generalContent,
       'clients' => $clients->getResults(),
+      'social_link' => $social_link->getResults(),
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),
       'menu_learn' => $menu_learn->getResults(),

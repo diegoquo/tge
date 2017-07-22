@@ -6,8 +6,17 @@ if (isset($WPGLOBAL['pageContent'])) {
 }
 
 $clients = $WPGLOBAL['clients'];
+$social_link = $WPGLOBAL['social_link'];
 $features_items = $WPGLOBAL['features_items'];
 $features_menu = $WPGLOBAL['features_menu'];
+$general_content = $WPGLOBAL['general_content'];
+$menu_learn = $WPGLOBAL['menu_learn'];
+$menu_doc = $WPGLOBAL['menu_doc'];
+$menu_user_guide = $WPGLOBAL['menu_user_guide'];
+$menu_help = $WPGLOBAL['menu_help'];
+$general_content = $WPGLOBAL['general_content'];
+$home = $WPGLOBAL['home'];
+$geodist = $WPGLOBAL['geodist'];
 
 $cont = 0;
 

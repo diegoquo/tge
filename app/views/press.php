@@ -14,7 +14,7 @@ $menu_doc = $WPGLOBAL['menu_doc'];
 $menu_user_guide = $WPGLOBAL['menu_user_guide'];
 $menu_help = $WPGLOBAL['menu_help'];
 $general_content = $WPGLOBAL['general_content'];
-$privacy_police = $WPGLOBAL['privacy_police'];
+$press = $WPGLOBAL['press'];
 
 $cont = 0;
 
@@ -40,33 +40,32 @@ $title = "TODO";
   <?php include 'menu_white.php'; ?>
 
   <div class="section-hero-b" data-ix="animate-on-load-a">
-    <div class="container w-container" data-ix="animate-on-load-b">
-      <div class="container-j" data-ix="animate-on-scroll-b">
+    <div class="container w-container">
+      <div class="container-j">
         <div class="section-hero-b-iem-a">
-          <h1>
-             <?= $privacy_police->getText('privacy_police.title') ? $privacy_police->getText('privacy_police.title') : "Untitled" ?>
+          <h1 data-ix="animate-on-load-b">
+            <?= $press->getText('press.title') ? $press->getText('press.title') : "Untitled" ?>
           </h1>
         </div>
-        <div>
-          <div class="p-big">
-            <?= $privacy_police->getText('privacy_police.subtitle') ? $privacy_police->getText('privacy_police.subtitle') : "Untitled" ?></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section-a" data-ix="animate-on-load-c">
-    <div class="container w-container">
-      <div class="container-n">
-        <div>
-          <div class="w-richtext">
-            <?= $privacy_police->getStructuredText("privacy_police.content")->asHtml($resolver); ?>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
+        <div class="section-hero-b-iem-a" data-ix="animate-on-load-c">
+          <div class="p-big">
+            <?= $press->getText('press.resume') ? $press->getText('press.resume') : "Untitled" ?>
+          </div>
+        </div>
+        <div class="section-hero-b-iem-a" data-ix="animate-on-load-d">
+          <div class="p-big">
+            <?= $press->getStructuredText("press.content")->asHtml($resolver); ?>
+          </div>
+        </div>
+
+        <div class="blog-list-box-item-b-sub-item-b"><a class="button-b w-button" href="/press-list">Back to press list</a>
+            </div>
+        
+      </div>
+    </div>
+  </div>
+  
   <?php include 'customers.php'; ?>
 
   <div class="section-call-of-action-a" data-ix="animate-on-scroll-a">

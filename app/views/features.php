@@ -79,7 +79,7 @@
                 <a 
                 class="button-b w-button" 
                 data-ix="tabs-2" 
-                href="">Learn more</a>
+                href="<?= $feature->getLink('features_item.link')->getUrl($linkResolver) ?>">Learn more</a>
 
               </div>
             </div>

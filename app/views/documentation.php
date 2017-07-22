@@ -6,6 +6,7 @@ if (isset($WPGLOBAL['pageContent'])) {
 }
 
 $clients = $WPGLOBAL['clients'];
+$social_link = $WPGLOBAL['social_link'];
 $features_items = $WPGLOBAL['features_items'];
 $features_menu = $WPGLOBAL['features_menu'];
 $menu_learn = $WPGLOBAL['menu_learn'];
@@ -46,6 +47,8 @@ $title = "TODO";
           <div class="section-k-container-a-box-a-item-a">
             <div class="p-big w-hidden-tiny">Documentation</div>
             <h1 class="w-hidden-main w-hidden-medium w-hidden-small">Documentation</h1>
+          </div>
+          <div class="div-block-10"><a class="link" href="/documentations/7">Dev Docs</a>
           </div>
           <div class="div-block-10"><a class="link" href="/documentations/1">Dev Docs iOS</a>
           </div>

@@ -50,9 +50,10 @@
     </div>
     <div class="login-section-a-container-b" data-ix="animate-on-load-c">
       <div class="login-container-b-box-a">
+        <a class="back1" href="javascript:history.back()">
         <div class="login-close-button w-embed">
-          <a class="back1" href="javascript:history.back()"></a>
         </div>
+        </a>
         <div class="login-container-box-a-item-a">
           <div class="ogin-container-box-a-item-b">
             <div>Already have an account?</div>

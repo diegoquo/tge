@@ -5,6 +5,9 @@ if (isset($WPGLOBAL['pageContent'])) {
   $pageContent = $WPGLOBAL['pageContent'];
 }
 
+$clients = $WPGLOBAL['clients'];
+$social_link = $WPGLOBAL['social_link'];
+
 $features_items = $WPGLOBAL['features_items'];
 $features_menu = $WPGLOBAL['features_menu'];
 $menu_learn = $WPGLOBAL['menu_learn'];
@@ -12,6 +15,7 @@ $menu_doc = $WPGLOBAL['menu_doc'];
 $menu_user_guide = $WPGLOBAL['menu_user_guide'];
 $menu_help = $WPGLOBAL['menu_help'];
 $general_content = $WPGLOBAL['general_content'];
+$contac = $WPGLOBAL['contac'];
 
 $cont = 0;
 
@@ -40,10 +44,12 @@ $title = "TODO";
     <div class="container w-container">
       <div class="container-j" data-ix="animate-on-load-b">
         <div class="section-hero-b-iem-a">
-          <h1>How we can help you?</h1>
+          <h1><?= $contac->getText('contac.title') ? $contac->getText('contac.title') : "Untitled" ?></h1>
         </div>
         <div class="section-hero-b-iem-a">
-          <div class="p-big">Tapgage is here to provide you with more information, answers to any questions you may have and create an effective solution to all your needs.</div>
+          <div class="p-big">
+            <?= $contac->getText('contac.subtitle') ? $contac->getText('contac.subtitle') : "Untitled" ?>
+          </div>
         </div>
       </div>
     </div>
@@ -51,7 +57,7 @@ $title = "TODO";
   <div class="section-f" data-ix="animate-on-load-c">
     <div class="section-f-container-a">
       <div class="section-f-box-a" data-ix="animate-on-load-d">
-        <h2>Have any questions? <br>Get in touch!</h2>
+        <h2><?= $contac->getText('contac.form_headline') ? $contac->getText('contac.form_headline') : "Untitled" ?></h2>
         <div class="section-f-form-block">
           <div class="w-form">
             <form data-name="Email Form" id="email-form" name="email-form">
@@ -111,30 +117,24 @@ $title = "TODO";
             <h2>Reach us</h2>
           </div>
           <div class="container-m-item-a-sub-item-a">
-            <div class="p-big"><strong>sales@tapgage.com</strong>
+            <div class="p-big"><strong>
+            <?= $contac->getStructuredText("contac.reach_us")->asHtml($resolver); ?></strong>
             </div>
           </div>
-          <div class="container-m-item-a-sub-item-a">
-            <div class="p-big"><strong>sales@tapgage.com</strong>
-            </div>
-          </div>
-          <div class="container-m-item-a-sub-item-a">
-            <div class="p-big"><strong>sales@tapgage.com</strong>
-            </div>
-          </div>
+          
         </div>
         <div class="container-m-item-a" data-ix="animate-on-scroll-c">
           <div class="container-m-item-a-sub-item-a">
-            <h2>Find us</h2>
+            <h2><?= $contac->getText('contac.find_us_headline') ? $contac->getText('contac.find_us_headline') : "Untitled" ?></h2>
           </div>
           <div class="container-m-item-a-sub-item-a">
-            <div>Plot no. 44, Kavuri Hills, Phase 1, Behind Hotel Jubilee Ridge, Hyderabad, Telangana 500033. India.</div>
+            <div><?= $contac->getText('contac.find_us') ? $contac->getText('contac.find_us') : "Untitled" ?></div>
           </div>
           <div class="container-m-item-a-sub-item-a">
-            <h2>Call us</h2>
+            <h2><?= $contac->getText('contac.call_us') ? $contac->getText('contac.call_us') : "Untitled" ?></h2>
           </div>
           <div>
-            <div class="p-big">1-XXX-XXX-XXXX</div>
+            <div class="p-big"><?= $contac->getText('contac.phone') ? $contac->getText('contac.phone') : "Untitled" ?></div>
           </div>
         </div>
       </div>

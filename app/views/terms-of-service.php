@@ -5,6 +5,8 @@ if (isset($WPGLOBAL['pageContent'])) {
   $pageContent = $WPGLOBAL['pageContent'];
 }
 
+$clients = $WPGLOBAL['clients'];
+$social_link = $WPGLOBAL['social_link'];
 $features_items = $WPGLOBAL['features_items'];
 $features_menu = $WPGLOBAL['features_menu'];
 $menu_learn = $WPGLOBAL['menu_learn'];
@@ -56,13 +58,6 @@ $title = "TODO";
   <div class="section-a" data-ix="animate-on-scroll-a">
     <div class="container w-container">
       <div class="container-n">
-        <div class="container-n-item-a">
-          <div class="w-richtext">
-            <p>Welcome to the &nbsp;website/service which is operated by &nbsp;Prototyping Ltd (in this Agreement, "", ", "we", "us" or "our").</p>
-            <p>We run a prototyping service called and would love for you to use it. Our basic service is free, and we will offer more advanced features in the future. Our service is designed to give you as much control and ownership over what goes on your site as possible and encourage you to express yourself freely. However, we also encourage you to be responsible in what you publish as prototypes. In particular, make sure that no prohibited items such as spam, viruses, hate content, pirated material, copyrighted material etc. appear on or get linked to from your site. We do not claim any intellectual property rights whatsoever in/of your files.</p>
-            <p>If you find a prototype that you believe violates our terms of service, please report it to help@123.com.</p>
-          </div>
-        </div>
         <div>
           <div class="w-richtext">
               <?= $terms_of_service->getStructuredText("terms_of_service.content")->asHtml($resolver); ?>
