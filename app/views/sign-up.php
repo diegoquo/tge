@@ -1,4 +1,17 @@
+<?php
 
+$prismic = $WPGLOBAL['prismic'];
+if (isset($WPGLOBAL['pageContent'])) {
+  $pageContent = $WPGLOBAL['pageContent'];
+}
+
+$sign_up = $WPGLOBAL['sign_up'];
+
+$cont = 0;
+
+$title = "TODO";
+
+?>
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
 <!--  Last Published: Mon Jun 26 2017 15:10:19 GMT+0000 (UTC)  -->
@@ -56,33 +69,42 @@
         </a>
         <div class="login-container-box-a-item-a">
           <div class="ogin-container-box-a-item-b">
-            <div>Already have an account?</div>
-          </div><a class="button-a w-button" href="/login">Login</a>
+            <div>
+            <?= $sign_up->getText('sign_up.already_have_account_line') ? $sign_up->getText('sign_up.already_have_account_line') : "Untitled" ?></div>
+          </div><a class="button-a w-button" href="/login">
+            <?= $sign_up->getText('sign_up.login_button_line') ? $sign_up->getText('sign_up.login_button_line') : "Untitled" ?>
+          </a>
         </div>
       </div>
       <div class="login-section-a-container-b-box-a" data-ix="animate-on-load-b">
         <div class="login-section-a-item-b">
-          <h2>Sign up for free analytics and engagement!</h2>
+          <h2><?= $sign_up->getText('sign_up.title') ? $sign_up->getText('sign_up.title') : "Untitled" ?></h2>
         </div>
         <div class="login-section-a-item-b">
-          <div class="p-big">Enter your details below</div>
+          <div class="p-big"><?= $sign_up->getText('sign_up.description') ? $sign_up->getText('sign_up.description') : "Untitled" ?></div>
         </div>
         <div class="login-section-a-container-b-box-b">
           <div class="w-form">
             <form data-name="Email Form" id="email-form" name="email-form">
-              <label class="field-label" for="name">Full name</label>
+              <label class="field-label" for="name">
+                <?= $sign_up->getText('sign_up.form_name_line') ? $sign_up->getText('sign_up.form_name_line') : "Untitled" ?>
+              </label>
               <input class="form-text-field-a w-input" data-name="Name" id="name" maxlength="256" name="name" placeholder="Name" type="text">
-              <label class="field-label" for="Email-2">Email address</label>
+              <label class="field-label" for="Email-2">
+                <?= $sign_up->getText('sign_up.form_email_line') ? $sign_up->getText('sign_up.form_email_line') : "Untitled" ?>
+              </label>
               <input class="form-text-field-a w-input" data-name="Email" id="Email-2" maxlength="256" name="Email" placeholder="Email" type="text">
               <div class="div-block-20">
-                <label class="field-label" for="email">Password</label>
+                <label class="field-label" for="email">
+                  <?= $sign_up->getText('sign_up.form_password_line') ? $sign_up->getText('sign_up.form_password_line') : "Untitled" ?>
+                </label>
               </div>
               <input class="form-text-field-a form-text-field-a-variation-a w-input" data-name="Password" id="Password" maxlength="256" name="Password" placeholder="Password" required="required" type="password">
               <div class="login-section-form-item-a">
                 <input class="button-c button-c-variation-a w-button" data-wait="Please wait..." type="submit" value="Sign up for a free account">
               </div>
               <div class="login-section-form-item-b">
-                <div>By creating an account, you agree to our <a class="link-3">Terms and conditions</a>.</div>
+                <div><?= $sign_up->getText('sign_up.terms_and_conditions_line') ? $sign_up->getText('sign_up.terms_and_conditions_line') : "Untitled" ?></a>.</div>
               </div>
             </form>
             <div class="w-form-done">

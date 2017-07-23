@@ -14,6 +14,8 @@ $menu_doc = $WPGLOBAL['menu_doc'];
 $menu_user_guide = $WPGLOBAL['menu_user_guide'];
 $menu_help = $WPGLOBAL['menu_help'];
 $general_content = $WPGLOBAL['general_content'];
+$pri = $WPGLOBAL['pri'];
+
 
 $cont = 0;
 
@@ -42,9 +44,11 @@ $title = "TODO";
     <div class="container w-container">
       <div class="section-hero-b-container-a" data-ix="animate-on-load-b">
         <div class="section-hero-b-iem-a">
-          <h1>Choose plan</h1>
+          <h1>
+          <?= $pri->getText('pri.headline') ? $pri->getText('pri.headline') : "Untitled" ?>
+          </h1>
         </div>
-        <div>From starter to enterprise, we’ve got you covered.</div>
+        <div><?= $pri->getText('pri.description') ? $pri->getText('pri.description') : "Untitled" ?></div>
       </div>
     </div>
   </div>
@@ -52,109 +56,86 @@ $title = "TODO";
     <div class="container w-container">
       <div class="container-f">
         <div class="container-f-item-a" data-ix="animate-on-load-c">
-          <div class="container-f-item-a-sub-item-a"><img class="container-f-item-a-pic-a" src="images/Asset-34x3x.png">
+          <div class="container-f-item-a-sub-item-a">
+            <img class="container-f-item-a-pic-a" src="<?= $pri->getImage("pri.pack_1_featured_pic")->getUrl() ?>">
           </div>
           <div class="container-f-item-a-sub-item-a">
             <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <h4>Starter - Free</h4>
+              <h4><?= $pri->getText('pri.pack_1_headline') ? $pri->getText('pri.pack_1_headline') : "Untitled" ?></h4>
             </div>
             <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <div>Up to one million monthly events</div>
-            </div>
-          </div>
-          <div class="container-f-item-a-sub-item-a">
-            <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <h3 class="container-f-headline-a">Free</h3>
+              <div><?= $pri->getText('pri.pack_1_description') ? $pri->getText('pri.pack_1_description') : "Untitled" ?></div>
             </div>
           </div>
           <div class="container-f-item-a-sub-item-a">
             <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <div>Up to one million monthly events</div>
-            </div>
-            <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <div>Up to one million monthly events</div>
-            </div>
-            <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <div>Up to one million monthly events</div>
-            </div>
-            <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <div>Up to one million monthly events</div>
-            </div>
-            <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <div>Up to one million monthly events</div>
+              <h3 class="container-f-headline-a"><?= $pri->getText('pri.pack_1_price') ? $pri->getText('pri.pack_1_price') : "Untitled" ?></h3>
             </div>
           </div>
-          <div class="container-f-item-a-sub-item-a"><a class="button-c w-button" href="#">Sign up</a>
+          <div class="container-f-item-a-sub-item-a">
+            <div class="container-f-item-a-sub-item-a-sub-item-a">
+              <div>
+                <?= $pri->getStructuredText('pri.pack_1_features')->asHtml($resolver) ?>
+              </div>
+            </div>
+            
+          </div>
+          <div class="container-f-item-a-sub-item-a">
+          <a class="button-c w-button" href="#">
+            <?= $pri->getText('pri.pack_1_button_line') ? $pri->getText('pri.pack_1_button_line') : "Untitled" ?>
+          </a>
           </div>
         </div>
         <div class="container-f-item-a" data-ix="animate-on-load-d">
-          <div class="container-f-item-a-sub-item-a"><img class="container-f-item-a-pic-a" src="images/Asset-24x3x.png">
+          <div class="container-f-item-a-sub-item-a"><img class="container-f-item-a-pic-a" src="<?= $pri->getImage("pri.pack_2_featured_pic")->getUrl() ?>">
           </div>
           <div class="container-f-item-a-sub-item-a">
             <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <h4>Pro</h4>
+              <h4><?= $pri->getText('pri.pack_2_headline') ? $pri->getText('pri.pack_2_headline') : "Untitled" ?></h4>
             </div>
             <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <div>Up to one million monthly events</div>
-            </div>
-          </div>
-          <div class="container-f-item-a-sub-item-a">
-            <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <h3 class="container-f-headline-a">$234/mo</h3>
+              <div><?= $pri->getText('pri.pack_2_description') ? $pri->getText('pri.pack_2_description') : "Untitled" ?></div>
             </div>
           </div>
           <div class="container-f-item-a-sub-item-a">
             <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <div>Up to one million monthly events</div>
+              <h3 class="container-f-headline-a"><?= $pri->getText('pri.pack_2_pricing') ? $pri->getText('pri.pack_2_pricing') : "Untitled" ?></h3>
             </div>
+          </div>
+          <div class="container-f-item-a-sub-item-a">
             <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <div>Up to one million monthly events</div>
+              <div>
+              <?= $pri->getStructuredText('pri.pack_2_features')->asHtml($resolver) ?>
+              </div>
             </div>
-            <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <div>Up to one million monthly events</div>
-            </div>
-            <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <div>Up to one million monthly events</div>
-            </div>
-            <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <div>Up to one million monthly events</div>
-            </div>
+            
           </div>
           <div class="container-f-item-a-sub-item-a"><a class="button-b w-button" href="#">Sign up</a>
           </div>
         </div>
         <div class="container-f-item-a" data-ix="animate-on-load-e">
-          <div class="container-f-item-a-sub-item-a"><img class="container-f-item-a-pic-a" src="images/Asset-44x3x.png">
+          <div class="container-f-item-a-sub-item-a"><img class="container-f-item-a-pic-a" src="<?= $pri->getImage("pri.pack_3_featured_pic")->getUrl() ?>">
           </div>
           <div class="container-f-item-a-sub-item-a">
             <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <h4>Entreprise</h4>
+              <h4><?= $pri->getText('pri.pack_3_headline') ? $pri->getText('pri.pack_3_headline') : "Untitled" ?></h4>
             </div>
             <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <div>Up to one million monthly events</div>
-            </div>
-          </div>
-          <div class="container-f-item-a-sub-item-a">
-            <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <h3 class="container-f-headline-a">$234/mo</h3>
+              <div><?= $pri->getText('pri.pack_3_headline') ? $pri->getText('pri.pack_3_headline') : "Untitled" ?></div>
             </div>
           </div>
           <div class="container-f-item-a-sub-item-a">
             <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <div>Up to one million monthly events</div>
+              <h3 class="container-f-headline-a"><?= $pri->getText('pri.pack_3_pricing') ? $pri->getText('pri.pack_3_pricing') : "Untitled" ?></h3>
             </div>
+          </div>
+          <div class="container-f-item-a-sub-item-a">
             <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <div>Up to one million monthly events</div>
+              <div>
+              <?= $pri->getStructuredText('pri.pack_3_features')->asHtml($resolver) ?>
+              </div>
             </div>
-            <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <div>Up to one million monthly events</div>
-            </div>
-            <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <div>Up to one million monthly events</div>
-            </div>
-            <div class="container-f-item-a-sub-item-a-sub-item-a">
-              <div>Up to one million monthly events</div>
-            </div>
+            
           </div>
           <div class="container-f-item-a-sub-item-a"><a class="button-b w-button" href="#">Sign up</a>
           </div>

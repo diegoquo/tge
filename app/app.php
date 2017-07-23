@@ -1440,6 +1440,7 @@ $app->get('/pricing', function ($request, $response) use ($app, $prismic) {
   $api = $prismic->get_api();
 
   $generalContent = $api->getSingle('general_content');
+  $pri = $api->getSingle('pri');
   
   $clients = $api->query(Predicates::at("document.type", "c"));
 
@@ -1483,6 +1484,7 @@ $app->get('/pricing', function ($request, $response) use ($app, $prismic) {
   render(
     $app, 'pricing', 
     array(
+      'pri' => $pri,
       'general_content' => $generalContent,
       'clients' => $clients->getResults(),
       'social_link' => $social_link->getResults(),
@@ -1724,11 +1726,13 @@ $app->get('/sign-up', function ($request, $response) use ($app, $prismic) {
   // Query the API for the homepage content and all the posts
   $api = $prismic->get_api();
 
+  $sign_up = $api->getSingle('sign_up');
   $generalContent = $api->getSingle('general_content');
   
   render(
     $app, 'sign-up', 
     array(
+      'sign_up' => $sign_up,
       'general_content' => $generalContent,
     ) 
   );
