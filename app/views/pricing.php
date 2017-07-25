@@ -15,6 +15,8 @@ $menu_user_guide = $WPGLOBAL['menu_user_guide'];
 $menu_help = $WPGLOBAL['menu_help'];
 $general_content = $WPGLOBAL['general_content'];
 $pri = $WPGLOBAL['pri'];
+$pricing_feature = $WPGLOBAL['pricing_feature'];
+$pricing_add = $WPGLOBAL['pricing_add'];
 
 
 $cont = 0;
@@ -162,318 +164,54 @@ $title = "TODO";
       <div class="container-h">
         <div class="div-block">
           <div class="container-g-item-a-row-b">
-            <div class="container-g-p-a">Data volume</div>
+            <div class="container-g-p-a">Features</div>
           </div>
         </div>
+        
+        <?php foreach ($pricing_feature as $pf) { ?>
         <div class="container-g" data-ix="animate-on-scroll-a">
           <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
+            <div><?= $pf->getText('pricing_feature.feature_descripcion') ? $pf->getText('pricing_feature.feature_descripcion') : "Untitled" ?></div>
           </div>
           <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
+            <div><?= $pf->getText('pricing_feature.feature_plan_a') ? $pf->getText('pricing_feature.feature_plan_a') : "Untitled" ?></div>
           </div>
           <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
+            <div><?= $pf->getText('pricing_feature.feature_plan_b') ? $pf->getText('pricing_feature.feature_plan_b') : "Untitled" ?></div>
           </div>
           <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
+            <div><?= $pf->getText('pricing_feature.feature_plan_c') ? $pf->getText('pricing_feature.feature_plan_c') : "Untitled" ?></div>
           </div>
         </div>
+        <?php } ?>
+
+        <?php foreach ($pricing_add as $pa) { ?>
+        <div class="container-g" data-ix="animate-on-scroll-a">
+          <div class="container-g-item-a-row-b">
+            <div><?= $pa->getText('pricing_add.feature_descripcion') ? $pa->getText('pricing_add.feature_descripcion') : "Untitled" ?></div>
+          </div>
+          <div class="container-g-item-a-row-a">
+            <div>
+              <img class="container-g-check" src="<?= $pa->getImage("pricing_add.check_mark_1")->getUrl() ?>">
+            </div>
+          </div>
+          <div class="container-g-item-a-row-a">
+            <div>
+              <img class="container-g-check" src="<?= $pa->getImage("pricing_add.check_mark_2")->getUrl() ?>">
+            </div>
+          </div>
+          <div class="container-g-item-a-row-a">
+            <div>
+              <img class="container-g-check" src="<?= $pa->getImage("pricing_add.check_mark_3")->getUrl() ?>">
+            </div>
+          </div>
+        </div>
+        <?php } ?>
+
+
       </div>
-      <div class="container-h">
-        <div class="div-block" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div class="container-g-p-a">Data volume</div>
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a"><img class="container-g-check" src="images/13x_3.png">
-          </div>
-          <div class="container-g-item-a-row-a"><img class="container-g-check" src="images/13x_3.png">
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a"><img class="container-g-check" src="images/13x_3.png">
-          </div>
-          <div class="container-g-item-a-row-a"><img class="container-g-check" src="images/13x_3.png">
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a"><img class="container-g-check" src="images/13x_3.png">
-          </div>
-          <div class="container-g-item-a-row-a"><img class="container-g-check" src="images/13x_3.png">
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a"><img class="container-g-check" src="images/13x_3.png">
-          </div>
-          <div class="container-g-item-a-row-a"><img class="container-g-check" src="images/13x_3.png">
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a"><img class="container-g-check" src="images/13x_3.png">
-          </div>
-          <div class="container-g-item-a-row-a"><img class="container-g-check" src="images/13x_3.png">
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a"><img class="container-g-check" src="images/13x_3.png">
-          </div>
-          <div class="container-g-item-a-row-a"><img class="container-g-check" src="images/13x_3.png">
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a"><img class="container-g-check" src="images/13x_3.png">
-          </div>
-          <div class="container-g-item-a-row-a"><img class="container-g-check" src="images/13x_3.png">
-          </div>
-        </div>
-      </div>
-      <div class="container-h">
-        <div class="div-block" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div class="container-g-p-a">Data volume</div>
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-        </div>
-      </div>
-      <div class="container-h">
-        <div class="div-block" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div class="container-g-p-a">Data volume</div>
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-        </div>
-      </div>
-      <div class="container-h">
-        <div class="div-block" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div class="container-g-p-a">Data volume</div>
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-        </div>
-        <div class="container-g" data-ix="animate-on-scroll-a">
-          <div class="container-g-item-a-row-b">
-            <div>Events Per Month</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-          <div class="container-g-item-a-row-a">
-            <div>Free up to 10 Million</div>
-          </div>
-        </div>
-      </div>
+      
+
       <div class="container-i">
         <div class="container-g-item-a-row-b">
           <h2 data-ix="animate-on-scroll-b">Get started for free!</h2>

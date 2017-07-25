@@ -1449,6 +1449,16 @@ $app->get('/pricing', function ($request, $response) use ($app, $prismic) {
     [ 'orderings' => '[my.social_link.uid]' ]
   );
 
+  $pricing_feature = $api->query(
+    Predicates::at('document.type', 'pricing_feature'),
+    [ 'orderings' => '[my.pricing_feature.uid]' ]
+  );
+
+  $pricing_add = $api->query(
+    Predicates::at('document.type', 'pricing_add'),
+    [ 'orderings' => '[my.pricing_add.uid]' ]
+  );
+
   //1 11 2 6 7 8 9 10 5 4  
   $ids = ['4', '1', '5', '6', '7', '8', '9', '10', '11'];
   $features_menu = $api->query(
@@ -1487,6 +1497,8 @@ $app->get('/pricing', function ($request, $response) use ($app, $prismic) {
       'pri' => $pri,
       'general_content' => $generalContent,
       'clients' => $clients->getResults(),
+      'pricing_feature' => $pricing_feature->getResults(),
+      'pricing_add' => $pricing_add->getResults(),
       'social_link' => $social_link->getResults(),
       'features_items' => $features_items->getResults(),
       'features_menu' => $features_menu->getResults(),

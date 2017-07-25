@@ -124,7 +124,7 @@
                 <div class="nav-bar-b-item-b-box-a" data-ix="close-nav-bar-item-b">
                   
                   <?php foreach ($menu_help as $mnu_doc) { ?>
-                  <a class="link-block-3 w-inline-block" href="#">
+                  <a class="link-block-3 w-inline-block" href="<?= $mnu_doc->getLink('menu_help.menu_link')->getUrl($linkResolver) ?>">
                     <div class="nav-bar-icon-box-a">
                       <div class="icon-box-a">
                         <img class="icon-pic-b" 
