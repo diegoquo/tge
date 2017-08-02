@@ -122,20 +122,12 @@ $title = "TODO";
   </div>
     
 
-
-
   <div class="section-a">
     <div class="container w-container">
-      <div class="blog-container-b">
-        <a class="blog-container-b-box-a w-inline-block" href="#"><img class="blog-container-b-arrow-a" src="images/arrow3x.png">
-          <h3>Previous</h3>
-        </a>
-        <a class="blog-container-b-box-b w-inline-block" href="#"><img class="blog-container-b-arrow-b" src="images/arrow3x.png">
-          <h3>Next</h3>
-        </a>
-      </div>
+      <div class="blog-container-b"><a class="blog-container-b-box-a w-inline-block"><img class="blog-container-b-arrow-a" src="images/arrow3x.png"><h3>Previous</h3></a><a class="blog-container-b-box-b w-inline-block"><img class="blog-container-b-arrow-b" src="images/arrow3x.png"><h3>Next</h3></a></div>
     </div>
   </div>
+
 
   <?php include 'customers.php'; ?>
 

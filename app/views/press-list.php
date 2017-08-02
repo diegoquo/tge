@@ -60,6 +60,9 @@ $title = "TODO";
             <div class="press-container-b-box-b">
               <div><?= $p->getDate('press.date')->asText() ?></div>
             </div>
+            <div class="press-container-c">
+               <a class="press-link-a" href="/press/<?= $p->getUid() ?>">Load more</a>
+            </div>
           </div>
 
           <!--
@@ -82,9 +85,13 @@ $title = "TODO";
           --> 
       <?php } ?>
      
-      <div class="press-container-c">
-         <a class="press-link-a" href="#">Load more</a>
-      </div>
+      
+    </div>
+  </div>
+
+  <div class="section-a">
+    <div class="container w-container">
+      <div class="blog-container-b"><a class="blog-container-b-box-a w-inline-block"><img class="blog-container-b-arrow-a" src="images/arrow3x.png"><h3>Previous</h3></a><a class="blog-container-b-box-b w-inline-block"><img class="blog-container-b-arrow-b" src="images/arrow3x.png"><h3>Next</h3></a></div>
     </div>
   </div>
  
