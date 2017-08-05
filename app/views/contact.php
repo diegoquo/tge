@@ -107,7 +107,7 @@ $title = "TODO";
     </div>
     <div class="section-f-container-b">
       <div >
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5123630324115!2d78.39142081444894!3d17.43517430601526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb915a8b9e73e9%3A0xfeacfba76c501992!2sKavuri+Hills+Phase+1%2C+Masthan+Nagar%2C+Madhapur%2C+Hyderabad%2C+Telangana+500033%2C+India!5e0!3m2!1ses!2sve!4v1501955596679" width="600" height="700" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5123630324115!2d78.39142081444894!3d17.43517430601526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb915a8b9e73e9%3A0xfeacfba76c501992!2sKavuri+Hills+Phase+1%2C+Masthan+Nagar%2C+Madhapur%2C+Hyderabad%2C+Telangana+500033%2C+India!5e0!3m2!1ses!2sve!4v1501955596679" width="600" height="750" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
     </div>
   </div>
