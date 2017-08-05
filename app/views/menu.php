@@ -37,8 +37,12 @@
                   
                   <a class="nav-bar-b-item-c-sub-item-b w-inline-block" href="/all_features">
                     <div class="nav-bar-b-item-c-sub-item-b-sub-item-a">
-                      <div class="nav-bar-b-link-a">All features</div>
-                      <div>Get line of credit with absolutely 0% interest forever.</div>
+                      <div class="nav-bar-b-link-a">
+                         <?= $general_content->getText('general_content.all_feature_a') ? $general_content->getText('general_content.all_feature_a') : "Untitled" ?>
+                      </div>
+                      <div>
+                        <?= $general_content->getText('general_content.all_feature_b') ? $general_content->getText('general_content.all_feature_b') : "Untitled" ?>
+                      </div>
                     </div><img class="nav-bar-arrow-a" src="/images/13x_1.png">
                   </a>
                 
